@@ -1,8 +1,11 @@
-// DARK STAR UNIVERSE ENGINE
-// Integrates spatial particles, gravitational central core, and orbital projection dynamics
+// ==========================================================================
+// DARK STAR UNIVERSE — SPATIAL ENGINE & CANVAS RENDERER
+// Combines Gravitational Blackhole Core, Accretion Corona, and Constellation Ties
+// ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   initUniverseEngine();
+  initQuickNavSmoothScroll();
 });
 
 function initUniverseEngine() {
@@ -14,112 +17,163 @@ function initUniverseEngine() {
   }
 
   const ctx = canvas.getContext('2d');
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+  let W, H, dpr;
+  let animationFrameId = null;
 
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-  });
+  function setCanvasSize() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.scale(dpr, dpr);
+  }
 
-  // Galaxy Particles
+  setCanvasSize();
+  window.addEventListener('resize', setCanvasSize);
+
+  // Particles & Orbital Physics
+  const particleCount = Math.min(W < 768 ? 50 : 130, 150);
   const particles = [];
-  const particleCount = Math.min(width < 768 ? 60 : 160, 200);
+  const cx = W / 2;
+  const cy = H / 2;
 
   for (let i = 0; i < particleCount; i++) {
     const angle = Math.random() * Math.PI * 2;
-    const distance = Math.random() * (Math.min(width, height) * 0.45);
+    const distance = 40 + Math.random() * (Math.max(W, H) * 0.5);
+    const speed = (0.0005 + Math.random() * 0.0015) * (distance < 120 ? 1.8 : 1.0);
     particles.push({
-      angle: angle,
-      distance: distance,
-      speed: (0.0005 + Math.random() * 0.001) * (distance < 100 ? 2 : 1),
-      radius: Math.random() * 1.8 + 0.4,
-      alpha: Math.random() * 0.7 + 0.2,
-      color: Math.random() > 0.6 ? '#dfb260' : (Math.random() > 0.3 ? '#06b6d4' : '#a855f7')
+      angle,
+      distance,
+      baseDistance: distance,
+      speed,
+      size: 1.2 + Math.random() * 2.2,
+      alpha: 0.15 + Math.random() * 0.6,
+      hue: Math.random() > 0.5 ? 40 + Math.random() * 20 : (Math.random() > 0.5 ? 190 + Math.random() * 40 : 270 + Math.random() * 40),
+      wobbleAmp: 2 + Math.random() * 5,
+      phase: Math.random() * Math.PI * 2
     });
   }
 
-  // Node Positions and Orbit Angles
-  const nodes = [
-    { id: 'node-web', radiusPct: 0.28, angle: 0 },
-    { id: 'node-culinary', radiusPct: 0.32, angle: (Math.PI * 2) / 5 },
-    { id: 'node-usda', radiusPct: 0.30, angle: ((Math.PI * 2) / 5) * 2 },
-    { id: 'node-literary', radiusPct: 0.34, angle: ((Math.PI * 2) / 5) * 3 },
-    { id: 'node-art', radiusPct: 0.29, angle: ((Math.PI * 2) / 5) * 4 }
-  ];
-
-  let rotationOffset = 0;
+  let time = 0;
+  let isRunning = true;
 
   function render() {
-    ctx.clearRect(0, 0, width, height);
+    if (!isRunning) return;
 
-    const centerX = width / 2;
-    const centerY = height / 2;
+    time += 0.006;
+    ctx.clearRect(0, 0, W, H);
 
-    // 1. Render Gravitational Central Core (Dark Star Engine)
-    const coreGlow = ctx.createRadialGradient(centerX, centerY, 5, centerX, centerY, 120);
-    coreGlow.addColorStop(0, 'rgba(223, 178, 96, 0.8)');
-    coreGlow.addColorStop(0.3, 'rgba(168, 85, 247, 0.3)');
-    coreGlow.addColorStop(0.7, 'rgba(6, 182, 212, 0.1)');
-    coreGlow.addColorStop(1, 'rgba(3, 3, 6, 0)');
+    const centerX = W / 2;
+    const centerY = H / 2;
 
+    // 1. Central Dark Star Accretion Corona (Fixed in viewport center background)
+    const coreRadius = Math.min(W, H) * 0.08 + 25;
+    
+    // Outer Accretion Glow
+    const outerGlow = ctx.createRadialGradient(centerX, centerY, coreRadius * 0.8, centerX, centerY, coreRadius * 3.5);
+    outerGlow.addColorStop(0, 'rgba(223, 178, 96, 0.25)');
+    outerGlow.addColorStop(0.3, 'rgba(168, 85, 247, 0.12)');
+    outerGlow.addColorStop(0.7, 'rgba(6, 182, 212, 0.05)');
+    outerGlow.addColorStop(1, 'transparent');
+
+    ctx.fillStyle = outerGlow;
     ctx.beginPath();
-    ctx.arc(centerX, centerY, 120, 0, Math.PI * 2);
-    ctx.fillStyle = coreGlow;
+    ctx.arc(centerX, centerY, coreRadius * 3.5, 0, Math.PI * 2);
     ctx.fill();
 
+    // Event Horizon Luminous Ring
     ctx.beginPath();
-    ctx.arc(centerX, centerY, 12, 0, Math.PI * 2);
-    ctx.fillStyle = '#ffffff';
-    ctx.shadowBlur = 20;
+    ctx.arc(centerX, centerY, coreRadius, 0, Math.PI * 2);
+    ctx.strokeStyle = 'rgba(223, 178, 96, 0.6)';
+    ctx.lineWidth = 2;
+    ctx.shadowBlur = 15;
     ctx.shadowColor = '#dfb260';
-    ctx.fill();
+    ctx.stroke();
     ctx.shadowBlur = 0;
 
-    // 2. Render Particle Field & Constellation Ties
-    particles.forEach((p, idx) => {
+    // Black Hole Shadow Center
+    const eventHorizon = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, coreRadius);
+    eventHorizon.addColorStop(0, '#000000');
+    eventHorizon.addColorStop(0.8, '#030306');
+    eventHorizon.addColorStop(1, 'rgba(10, 5, 18, 0.9)');
+    ctx.fillStyle = eventHorizon;
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, coreRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // 2. Render Orbiting Particles & Gravitational Gravitation
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
       p.angle += p.speed;
-      const x = centerX + Math.cos(p.angle) * p.distance;
-      const y = centerY + Math.sin(p.angle) * p.distance;
 
+      const wobble = Math.sin(time * 1.2 + p.phase + p.angle) * p.wobbleAmp;
+      const r = p.distance + wobble;
+      const x = centerX + Math.cos(p.angle) * r;
+      const y = centerY + Math.sin(p.angle) * r;
+
+      const alpha = p.alpha * (0.6 + Math.sin(time + p.phase) * 0.4);
+      
       ctx.beginPath();
-      ctx.arc(x, y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.globalAlpha = p.alpha;
+      ctx.arc(x, y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${p.hue}, 80%, 65%, ${alpha})`;
       ctx.fill();
-      ctx.globalAlpha = 1.0;
-    });
-
-    // 3. Update HTML Node Positions along Orbital Paths (Desktop layout)
-    if (window.innerWidth > 900) {
-      rotationOffset += 0.0008;
-      const orbitBaseRadius = Math.min(width, height) * 0.36;
-
-      nodes.forEach(n => {
-        const el = document.getElementById(n.id);
-        if (el) {
-          const currentAngle = n.angle + rotationOffset;
-          const nodeX = centerX + Math.cos(currentAngle) * (orbitBaseRadius * (n.radiusPct / 0.3));
-          const nodeY = centerY + Math.sin(currentAngle) * (orbitBaseRadius * (n.radiusPct / 0.3));
-
-          el.style.left = `${nodeX}px`;
-          el.style.top = `${nodeY}px`;
-
-          // Draw orbital connection ray
-          ctx.beginPath();
-          ctx.moveTo(centerX, centerY);
-          ctx.lineTo(nodeX, nodeY);
-          ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
-          ctx.lineWidth = 1;
-          ctx.setLineDash([4, 6]);
-          ctx.stroke();
-          ctx.setLineDash([]);
-        }
-      });
     }
 
-    requestAnimationFrame(render);
+    // 3. Connect Active World Nodes to Core via Constellation Rays
+    const nodeCards = document.querySelectorAll('.world-node-card');
+    nodeCards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      // Check if node is visible in viewport
+      if (rect.top < H && rect.bottom > 0) {
+        const nodeX = rect.left + rect.width / 2;
+        const nodeY = rect.top + rect.height / 2;
+
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(nodeX, nodeY);
+        
+        const opacity = Math.max(0, 1 - Math.abs(nodeY - centerY) / (H * 0.8)) * 0.25;
+        ctx.strokeStyle = `rgba(223, 178, 96, ${opacity})`;
+        ctx.lineWidth = 1;
+        ctx.setLineDash([6, 8]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    });
+
+    animationFrameId = requestAnimationFrame(render);
   }
 
   render();
+
+  // Visibility state handling for performance
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      isRunning = false;
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    } else {
+      if (!isRunning) {
+        isRunning = true;
+        render();
+      }
+    }
+  });
+}
+
+// Smooth Scroll Jump for Mobile Quick Nav Links
+function initQuickNavSmoothScroll() {
+  const quickLinks = document.querySelectorAll('.quick-nav-item');
+  quickLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId.startsWith('#')) {
+        e.preventDefault();
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+  });
 }
