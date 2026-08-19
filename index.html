@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARK STAR UNIVERSE | Ecosystem Central Hub</title>
+  <meta name="description" content="Enter the Dark Star Universe — interactive spatial gateway connecting Dark Star Web Development, Culinary, USDA, Literary, and Art.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <canvas id="universe-canvas"></canvas>
+
+  <header class="hud-header">
+    <div class="hud-title-wrap">
+      <span class="hud-mark">★</span>
+      <div>
+        <h1 class="hud-title">DARK STAR UNIVERSE</h1>
+        <span class="hud-sub">INTERACTIVE ECOSYSTEM GATEWAY</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERLAY INTERACTIVE NODE CARDS -->
+  <div class="node-overlay-container" aria-label="Dark Star Ecosystem Division Destinations">
+
+    <!-- NODE 1: DARK STAR WEB DEVELOPMENT -->
+    <a href="https://darkstarconsulting.netlify.app" class="universe-node-card node-card-web" id="node-web" target="_blank" rel="noopener noreferrer">
+      <div class="node-icon">⚡</div>
+      <h2 class="node-name">Dark Star Web Dev</h2>
+      <p class="node-tagline">Bespoke Web Development & Managed Digital Concepts</p>
+      <span class="node-action">Enter Division ↗</span>
+    </a>
+
+    <!-- NODE 2: DARK STAR CULINARY -->
+    <a href="https://darkstarculinary.netlify.app" class="universe-node-card node-card-culinary" id="node-culinary" target="_blank" rel="noopener noreferrer">
+      <div class="node-icon">🍷</div>
+      <h2 class="node-name">Dark Star Culinary</h2>
+      <p class="node-tagline">Bespoke Dining, Private Estate Operations & Gastronomy</p>
+      <span class="node-action">Enter Division ↗</span>
+    </a>
+
+    <!-- NODE 3: DSC USDA -->
+    <a href="https://dscusda.netlify.app" class="universe-node-card node-card-usda" id="node-usda" target="_blank" rel="noopener noreferrer">
+      <div class="node-icon">🌿</div>
+      <h2 class="node-name">DSC USDA</h2>
+      <p class="node-tagline">Hemp Sampling Agent & Field Compliance Services</p>
+      <span class="node-action">Enter Division ↗</span>
+    </a>
+
+    <!-- NODE 4: DARK STAR LITERARY -->
+    <a href="https://dark-star-literary-agency.netlify.app" class="universe-node-card node-card-literary" id="node-literary" target="_blank" rel="noopener noreferrer">
+      <div class="node-icon">📚</div>
+      <h2 class="node-name">Dark Star Literary</h2>
+      <p class="node-tagline">Literary Agency, Book Catalog & Publishing Property</p>
+      <span class="node-action">Enter Division ↗</span>
+    </a>
+
+    <!-- NODE 5: DSC ART -->
+    <a href="https://dscart-848.netlify.app" class="universe-node-card node-card-art" id="node-art" target="_blank" rel="noopener noreferrer">
+      <div class="node-icon">🎨</div>
+      <h2 class="node-name">DSC Art</h2>
+      <p class="node-tagline">Represented Artists Agency & Gallery (UrbanHippieArt)</p>
+      <span class="node-action">Enter Division ↗</span>
+    </a>
+
+  </div>
+
+  <!-- MOBILE NODE BAR SWITCHER -->
+  <div class="mobile-node-bar" aria-label="Mobile Navigation Quick Links">
+    <a href="https://darkstarconsulting.netlify.app" class="mobile-node-btn" title="Dark Star Web Dev" target="_blank" rel="noopener noreferrer">⚡</a>
+    <a href="https://darkstarculinary.netlify.app" class="mobile-node-btn" title="Dark Star Culinary" target="_blank" rel="noopener noreferrer">🍷</a>
+    <a href="https://dscusda.netlify.app" class="mobile-node-btn" title="DSC USDA" target="_blank" rel="noopener noreferrer">🌿</a>
+    <a href="https://dark-star-literary-agency.netlify.app" class="mobile-node-btn" title="Dark Star Literary" target="_blank" rel="noopener noreferrer">📚</a>
+    <a href="https://dscart-848.netlify.app" class="mobile-node-btn" title="DSC Art" target="_blank" rel="noopener noreferrer">🎨</a>
+  </div>
+
+  <script type="module" src="/src/universe-engine.js"></script>
+</body>
+</html>
