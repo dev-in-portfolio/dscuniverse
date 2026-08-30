@@ -5,12 +5,12 @@
 ## Overview
 `dscuniverse` connects all five Dark Star divisions within an immersive, high-performance 3D spatial canvas.
 
-## Connected Ecosystem Nodes & Hardwired Destinations
-1. **Dark Star Web Development (DSC)**: `https://darkstarconsulting.netlify.app`
-2. **Dark Star Culinary**: `https://darkstarculinary.netlify.app`
-3. **DSC USDA**: `https://dscusda.netlify.app`
-4. **Dark Star Literary Agency**: `https://dark-star-literary-agency.netlify.app`
-5. **Dark Star Art**: `https://dscart-848.netlify.app`
+## Connected Ecosystem Nodes & Public Destinations
+1. **Dark Star Web Development (DSC)**: `https://websites.darkstarconsultinggroup.com`
+2. **Dark Star Culinary**: `https://culinary.darkstarconsultinggroup.com`
+3. **DSC USDA**: `https://usda.darkstarconsultinggroup.com`
+4. **Dark Star Literary Agency**: `https://literaryagency.darkstarconsultinggroup.com`
+5. **Dark Star Art**: `https://art.darkstarconsultinggroup.com`
 
 ## Animation Architecture & Reuse
 Adapted from the user's `Animations` repository (`dev-in-portfolio/Animations`):
