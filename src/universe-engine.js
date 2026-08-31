@@ -42,7 +42,8 @@ function initUniverseEngine() {
     'world-culinary': { hue: 42, r: 223, g: 178, b: 96 },   // Ember Gold
     'world-usda': { hue: 155, r: 16, g: 185, b: 129 },     // Precision Emerald
     'world-literary': { hue: 270, r: 168, g: 85, b: 247 },  // Celestial Violet
-    'world-art': { hue: 345, r: 244, g: 63, b: 94 }        // Chromatic Rose
+    'world-art': { hue: 345, r: 244, g: 63, b: 94 },       // Chromatic Rose
+    'world-appdev': { hue: 239, r: 99, g: 102, b: 241 }    // Product Indigo
   };
 
   let activeRegionHue = 42; // Default Ember Gold
