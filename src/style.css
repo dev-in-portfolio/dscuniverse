@@ -16,6 +16,8 @@
   --accent-purple-glow: rgba(168, 85, 247, 0.4);
   --accent-rose: #f43f5e;
   --accent-rose-glow: rgba(244, 63, 94, 0.4);
+  --accent-indigo: #6366f1;
+  --accent-indigo-glow: rgba(99, 102, 241, 0.4);
   
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -369,6 +371,7 @@ body {
 .node-usda { --node-color: var(--accent-emerald); --node-glow: var(--accent-emerald-glow); }
 .node-literary { --node-color: var(--accent-purple); --node-glow: var(--accent-purple-glow); }
 .node-art { --node-color: var(--accent-rose); --node-glow: var(--accent-rose-glow); }
+.node-appdev { --node-color: var(--accent-indigo); --node-glow: var(--accent-indigo-glow); }
 
 /* ALTERNATING TIMELINE POSITIONING ON DESKTOP */
 @media (min-width: 900px) {
