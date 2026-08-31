@@ -11,7 +11,7 @@
 3. **DSC USDA**: `https://usda.darkstarconsultinggroup.com`
 4. **Dark Star Literary Agency**: `https://literaryagency.darkstarconsultinggroup.com`
 5. **Dark Star Art**: `https://art.darkstarconsultinggroup.com`
-6. **Application Development**: DSCG application/product development division. **Coverage Compass** is the first flagship app; public app destination remains intentionally unset while it is in private beta.
+6. **Application Development**: `https://appdevelopment.darkstarconsultinggroup.com` — DSCG application/product development division. **Coverage Compass** is the first flagship app at `https://coveragecompass.darkstarconsultinggroup.com`.
 
 ## Animation Architecture & Reuse
 Adapted from the user's `Animations` repository (`dev-in-portfolio/Animations`):
