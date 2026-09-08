@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(process.cwd(), 'index.html'),
         recognition: resolve(process.cwd(), 'recognition.html'),
+        supplierProfile: resolve(process.cwd(), 'supplier-profile.html'),
       },
     },
   },

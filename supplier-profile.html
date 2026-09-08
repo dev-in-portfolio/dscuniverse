@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplier & Product Evaluation Profile | Dark Star Consulting Group</title>
+  <meta name="description" content="Dark Star Consulting Group supplier and product evaluation profile covering business activities, commercial channels, current dog-product sourcing focus, and sample-shipping policy.">
+  <link rel="canonical" href="https://darkstarconsultinggroup.com/supplier-profile">
+  <meta property="og:title" content="Dark Star Consulting Group | Supplier & Product Evaluation Profile">
+  <meta property="og:description" content="Business profile for suppliers, manufacturers and product partners working with Dark Star Consulting Group.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://darkstarconsultinggroup.com/supplier-profile">
+  <meta name="theme-color" content="#030306">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .supplier-shell{position:relative;z-index:10;max-width:1180px;margin:0 auto;padding:8.5rem 1.5rem 5rem}
+    .supplier-nav{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 2.5rem;background:linear-gradient(180deg,rgba(3,3,6,.97),rgba(3,3,6,.72));backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .supplier-nav a{color:#fff;text-decoration:none}
+    .supplier-brand{display:flex;align-items:center;gap:.8rem;font-family:var(--font-display);font-weight:800;letter-spacing:.14em;font-size:.85rem}
+    .supplier-mark{width:26px;height:26px;fill:var(--accent-gold);filter:drop-shadow(0 0 9px var(--accent-gold))}
+    .back-link{font-family:var(--font-display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-gold)!important}
+    .supplier-hero{min-height:58vh;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.72fr);gap:2rem;align-items:center;padding:3rem 0 4rem}
+    .supplier-kicker{font-family:var(--font-display);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-gold);font-weight:700;margin-bottom:1.1rem}
+    .supplier-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,5.2rem);line-height:1.02;text-transform:uppercase;max-width:850px;margin:0 0 1.5rem}
+    .supplier-lede{max-width:760px;color:var(--text-muted);font-size:1.05rem;line-height:1.85}
+    .supplier-badges{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.8rem}
+    .supplier-badges span{font-family:var(--font-display);font-size:.63rem;letter-spacing:.11em;text-transform:uppercase;color:#dbe7ef;border:1px solid rgba(255,255,255,.12);padding:.6rem .75rem;background:rgba(255,255,255,.035)}
+    .identity-card{background:rgba(8,10,16,.86);border:1px solid rgba(6,182,212,.3);padding:1.7rem;box-shadow:0 25px 70px rgba(0,0,0,.5),0 0 40px rgba(6,182,212,.06)}
+    .identity-card h2{font-family:var(--font-display);font-size:1.1rem;line-height:1.45;text-transform:uppercase;margin:.2rem 0 1.4rem}
+    .identity-card dl{display:grid;gap:1rem}
+    .identity-card div{padding-top:1rem;border-top:1px solid var(--border-muted)}
+    .identity-card dt{font-size:.65rem;text-transform:uppercase;letter-spacing:.14em;color:var(--text-dim);margin-bottom:.35rem}
+    .identity-card dd{margin:0;color:#fff;line-height:1.55}
+    .identity-card a{color:var(--accent-cyan);text-decoration:none}
+    .section-block{padding:4.8rem 0 0}
+    .section-block h2{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,3rem);text-transform:uppercase;margin:.4rem 0 1rem}
+    .section-copy{color:var(--text-muted);line-height:1.8;max-width:820px}
+    .profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:2.1rem}
+    .profile-card{background:rgba(8,10,16,.82);border:1px solid var(--border-muted);padding:1.55rem;min-height:100%}
+    .profile-card:nth-child(1){border-color:rgba(168,85,247,.28)}
+    .profile-card:nth-child(2){border-color:rgba(6,182,212,.28)}
+    .profile-card small{font-family:var(--font-display);font-size:.63rem;letter-spacing:.14em;color:var(--accent-gold)}
+    .profile-card h3{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;margin:.7rem 0}
+    .profile-card p{color:var(--text-muted);font-size:.93rem;line-height:1.68}
+    .focus-panel{margin-top:2rem;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.7fr);gap:1rem}
+    .focus-main,.focus-note{background:rgba(8,10,16,.84);border:1px solid var(--border-muted);padding:1.7rem}
+    .focus-main{border-color:rgba(223,178,96,.34)}
+    .focus-main h3,.focus-note strong{font-family:var(--font-display);font-size:.9rem;text-transform:uppercase;color:#fff}
+    .focus-main ul{margin:1rem 0 0 1.15rem;color:var(--text-muted);line-height:1.8}
+    .focus-note{border-color:rgba(244,63,94,.24)}
+    .focus-note strong{display:block;color:#f4a1ad;margin-bottom:.8rem}
+    .focus-note p{color:var(--text-muted);line-height:1.7}
+    .policy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:2rem}
+    .policy-card{background:rgba(8,10,16,.82);border:1px solid var(--border-muted);padding:1.45rem}
+    .policy-card h3{font-family:var(--font-display);font-size:.86rem;text-transform:uppercase;margin-bottom:.75rem}
+    .policy-card p{color:var(--text-muted);font-size:.92rem;line-height:1.68}
+    .contact-panel{margin-top:4.8rem;padding:2rem;border:1px solid rgba(6,182,212,.34);background:radial-gradient(circle at 90% 10%,rgba(6,182,212,.12),transparent 38%),rgba(8,10,16,.88);display:flex;justify-content:space-between;align-items:center;gap:2rem}
+    .contact-panel h2{font-family:var(--font-display);font-size:clamp(1.3rem,3vw,2.1rem);text-transform:uppercase;margin:.3rem 0 .8rem}
+    .contact-panel p{max-width:760px;color:var(--text-muted);line-height:1.7}
+    .contact-button{flex:0 0 auto;font-family:var(--font-display);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#050608!important;background:var(--accent-gold);padding:.9rem 1.1rem;border:1px solid #f0cb88;box-shadow:0 0 24px rgba(223,178,96,.18)}
+    .supplier-footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--border-muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--text-dim);font-size:.82rem}
+    .supplier-footer a{color:var(--accent-gold);text-decoration:none}
+    @media(max-width:850px){.supplier-hero{grid-template-columns:1fr}.policy-grid{grid-template-columns:1fr}.focus-panel{grid-template-columns:1fr}.contact-panel{align-items:flex-start;flex-direction:column}}
+    @media(max-width:680px){.supplier-nav{padding:1rem 1.2rem}.supplier-brand span{display:none}.supplier-shell{padding-top:6.5rem}.profile-grid{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Dark Star Consulting Group, LLC",
+    "url":"https://darkstarconsultinggroup.com/",
+    "email":"darkstar@darkstarconsultinggroup.com",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Charlotte",
+      "addressRegion":"NC",
+      "addressCountry":"US"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="universe-canvas"></canvas>
+
+  <header class="supplier-nav">
+    <a class="supplier-brand" href="/">
+      <svg class="supplier-mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg>
+      <span>DARK STAR CONSULTING GROUP</span>
+    </a>
+    <a class="back-link" href="/">Return to Universe ↗</a>
+  </header>
+
+  <main class="supplier-shell">
+    <section class="supplier-hero">
+      <div>
+        <div class="supplier-kicker">Supplier & Product Evaluation Profile</div>
+        <h1 class="supplier-title">Business profile for manufacturers & suppliers.</h1>
+        <p class="supplier-lede">
+          Dark Star Consulting Group, LLC is a Charlotte, North Carolina-based multidisciplinary business
+          operating across consulting, digital development, application development, culinary projects,
+          regulatory field services, publishing, art representation, and supplier evaluation.
+        </p>
+        <div class="supplier-badges" aria-label="Business profile highlights">
+          <span>Charlotte · North Carolina</span>
+          <span>United States</span>
+          <span>B2B</span>
+          <span>Supplier Evaluation</span>
+        </div>
+      </div>
+
+      <aside class="identity-card" aria-label="Company information">
+        <div class="supplier-kicker">Company Snapshot</div>
+        <h2>Dark Star Consulting Group, LLC</h2>
+        <dl>
+          <div><dt>Website</dt><dd><a href="https://darkstarconsultinggroup.com">darkstarconsultinggroup.com</a></dd></div>
+          <div><dt>Primary market</dt><dd>United States</dd></div>
+          <div><dt>Commercial model</dt><dd>Direct B2B services, projects, sourcing &amp; evaluation</dd></div>
+          <div><dt>Supplier contact</dt><dd><a href="mailto:darkstar@darkstarconsultinggroup.com">darkstar@darkstarconsultinggroup.com</a></dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section-block" aria-labelledby="business-profile-title">
+      <div class="supplier-kicker">Business Profile</div>
+      <h2 id="business-profile-title">What DSCG does</h2>
+      <p class="section-copy">
+        DSCG builds and supports business systems, websites, software products, brand assets, operational
+        projects, and specialized client engagements. Supplier relationships are evaluated for practical
+        fit within DSCG operations, client work, partner opportunities, private-label concepts, and future
+        procurement needs.
+      </p>
+
+      <div class="profile-grid">
+        <article class="profile-card">
+          <small>01 · OPERATING MODEL</small>
+          <h3>Consulting & project execution</h3>
+          <p>Direct business engagements spanning strategy, development, brand execution, digital systems, and specialized operating projects across the Dark Star ecosystem.</p>
+        </article>
+        <article class="profile-card">
+          <small>02 · SUPPLIER WORK</small>
+          <h3>Sourcing & evaluation</h3>
+          <p>Manufacturers are evaluated on product quality, packaging, fulfillment, wholesale economics, minimum order quantities, production lead time, and private-label capability.</p>
+        </article>
+        <article class="profile-card">
+          <small>03 · SALES CHANNELS</small>
+          <h3>Direct B2B & web-based channels</h3>
+          <p>DSCG currently sells consulting and project services through direct B2B relationships, the corporate and division websites, and web-based project/intake channels.</p>
+        </article>
+        <article class="profile-card">
+          <small>04 · PET-PRODUCT STATUS</small>
+          <h3>Evaluation, not current retail inventory</h3>
+          <p>Pet products are presently a sourcing and evaluation category rather than a stocked consumer retail catalog. Potential routes include procurement, project-specific sourcing, client, partner, and private-label opportunities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="pet-focus-title">
+      <div class="supplier-kicker">Current Pet-Product Focus</div>
+      <h2 id="pet-focus-title">Dog products only</h2>
+      <p class="section-copy">
+        Current pet-product evaluation is intentionally narrow. DSCG is reviewing dog-focused products
+        for supplier comparison and potential future sourcing relationships, with particular interest in
+        straightforward treat and consumable formats.
+      </p>
+
+      <div class="focus-panel">
+        <div class="focus-main">
+          <h3>Current evaluation categories</h3>
+          <ul>
+            <li>Dog treats and dog-focused consumables</li>
+            <li>Simple or single-ingredient treat formats</li>
+            <li>Products suitable for wholesale or private-label evaluation</li>
+            <li>Packaging and fulfillment formats appropriate for U.S. business use</li>
+          </ul>
+        </div>
+        <div class="focus-note">
+          <strong>Not currently requested</strong>
+          <p>Cat products are not part of the current sourcing request. Please do not include cat samples unless specifically requested in writing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="sample-policy-title">
+      <div class="supplier-kicker">Sample & Shipping Policy</div>
+      <h2 id="sample-policy-title">Small samples. Clear terms.</h2>
+      <p class="section-copy">
+        DSCG uses supplier samples for practical evaluation, not for accumulating promotional inventory.
+        A small representative assortment is preferred.
+      </p>
+
+      <div class="policy-grid">
+        <article class="policy-card">
+          <h3>Evaluation quantity</h3>
+          <p>A small box or representative assortment is generally sufficient for product, packaging, and supplier review.</p>
+        </article>
+        <article class="policy-card">
+          <h3>International shipping</h3>
+          <p>Before an international sample shipment is dispatched, DSCG requires written confirmation that both the sample products and shipping charges are complimentary.</p>
+        </article>
+        <article class="policy-card">
+          <h3>Recipient contact</h3>
+          <p>DSCG maintains a business receiving point in Charlotte, North Carolina. Recipient phone number and complete shipping details are provided directly to confirmed suppliers rather than published publicly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-panel" aria-labelledby="supplier-contact-title">
+      <div>
+        <div class="supplier-kicker">Supplier Contact</div>
+        <h2 id="supplier-contact-title">Manufacturer or product-partner inquiry</h2>
+        <p>Suppliers may send sample availability, wholesale terms, private-label details, MOQs, production lead times, and U.S. fulfillment information for review.</p>
+      </div>
+      <a class="contact-button" href="mailto:darkstar@darkstarconsultinggroup.com">Contact DSCG</a>
+    </section>
+
+    <footer class="supplier-footer">
+      <span>© 2026 Dark Star Consulting Group, LLC · Charlotte, North Carolina</span>
+      <span><a href="/">Dark Star Universe</a> · <a href="/recognition">Recognition</a></span>
+    </footer>
+  </main>
+
+  <script type="module" src="/src/universe-engine.js"></script>
+</body>
+</html>

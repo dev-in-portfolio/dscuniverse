@@ -10,6 +10,16 @@
   status = 200
 
 [[redirects]]
+  from = "/supplier-profile"
+  to = "/supplier-profile.html"
+  status = 200
+
+[[redirects]]
+  from = "/business-profile"
+  to = "/supplier-profile.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
