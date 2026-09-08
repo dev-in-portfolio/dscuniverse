@@ -53,3 +53,5 @@ for (const deployment of deployments) {
     rmSync(workspace, { recursive: true, force: true });
   }
 }
+
+// Node 22 production closeout trigger.
