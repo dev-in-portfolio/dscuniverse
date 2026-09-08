@@ -1,4 +1,15 @@
 [[redirects]]
+  from = "/awards"
+  to = "/recognition"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/recognition"
+  to = "/recognition.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
