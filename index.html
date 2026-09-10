@@ -9,21 +9,14 @@
   <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-  <!-- deployment-trigger: appdevelopment-link -->
+  <!-- deployment-trigger: restaurant-consulting -->
 
-  <!-- BACKGROUND SPATIAL CANVAS (FIXED, NON-BLOCKING) -->
   <canvas id="universe-canvas"></canvas>
 
-  <!-- HUD HEADER -->
   <header class="hud-header">
     <a href="/" class="hud-brand" aria-label="Dark Star Universe Home">
-      <svg class="hud-mark-svg" viewBox="0 0 100 100">
-        <polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36" fill="#dfb260" />
-      </svg>
-      <div>
-        <h1 class="hud-title">DARK STAR UNIVERSE</h1>
-        <span class="hud-sub">ECOSYSTEM CENTRAL HUB</span>
-      </div>
+      <svg class="hud-mark-svg" viewBox="0 0 100 100"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36" fill="#dfb260" /></svg>
+      <div><h1 class="hud-title">DARK STAR UNIVERSE</h1><span class="hud-sub">ECOSYSTEM CENTRAL HUB</span></div>
     </a>
     <nav class="hud-corporate-links" aria-label="Corporate resources">
       <a href="/supplier-profile" class="hud-corporate-link">Supplier Profile <span aria-hidden="true">↗</span></a>
@@ -31,186 +24,70 @@
     </nav>
   </header>
 
-  <!-- MOBILE / TABLET QUICK CONSTELLATION NAV DOCK -->
   <nav class="galaxy-quick-nav" aria-label="Quick Division Navigator">
-    <a href="#world-web" class="quick-nav-item node-web" title="Dark Star Web Dev" style="--node-color:var(--accent-cyan);">
-      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-    </a>
-    <a href="#world-culinary" class="quick-nav-item node-culinary" title="Dark Star Culinary" style="--node-color:var(--accent-gold);">
-      <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/></svg>
-    </a>
-    <a href="#world-usda" class="quick-nav-item node-usda" title="DSC USDA" style="--node-color:var(--accent-emerald);">
-      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    </a>
-    <a href="#world-literary" class="quick-nav-item node-literary" title="Dark Star Literary" style="--node-color:var(--accent-purple);">
-      <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5H6.5A2.5 2.5 0 0 0 4 19.5z"/></svg>
-    </a>
-    <a href="#world-art" class="quick-nav-item node-art" title="DSC Art" style="--node-color:var(--accent-rose);">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
-    </a>
-    <a href="#world-appdev" class="quick-nav-item node-appdev" title="Application Development" style="--node-color:var(--accent-indigo);">
-      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-    </a>
+    <a href="#world-web" class="quick-nav-item node-web" title="Dark Star Web Dev" style="--node-color:var(--accent-cyan);"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></a>
+    <a href="#world-culinary" class="quick-nav-item node-culinary" title="Dark Star Culinary" style="--node-color:var(--accent-gold);"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/></svg></a>
+    <a href="#world-usda" class="quick-nav-item node-usda" title="DSC USDA" style="--node-color:var(--accent-emerald);"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></a>
+    <a href="#world-literary" class="quick-nav-item node-literary" title="Dark Star Literary" style="--node-color:var(--accent-purple);"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5H6.5A2.5 2.5 0 0 0 4 19.5z"/></svg></a>
+    <a href="#world-art" class="quick-nav-item node-art" title="DSC Art" style="--node-color:var(--accent-rose);"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></a>
+    <a href="#world-appdev" class="quick-nav-item node-appdev" title="Application Development" style="--node-color:var(--accent-indigo);"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></a>
   </nav>
 
-  <!-- MAIN SCROLLABLE SPATIAL VIEWPORT -->
   <main class="spatial-viewport">
-
-    <!-- HERO CENTRAL CORE INTRO -->
     <section class="hero-core-section">
       <span class="hero-tag">GRAVITATIONAL CORE & CENTRAL HUB</span>
       <h1 class="hero-title">ONE UNIVERSE.<br>SIX WORLDS.</h1>
-      <p class="hero-description">
-        Traverse the Dark Star ecosystem. Each celestial division represents a specialized discipline operating under shared branding, high-end motion, and dark luxury architecture.
-      </p>
-      <a class="hero-recognition-signal" href="/recognition">
-        <span>Q3 2026</span>
-        <strong>International Elite 100 Awards · Shortlisted</strong>
-        <small>Excellence in Strategic Innovation &amp; Ecosystem Architecture · North Carolina · USA</small>
-      </a>
-      <div class="scroll-indicator" aria-hidden="true">
-        <span>Scroll to Explore</span>
-        <div class="scroll-indicator-arrow"></div>
-      </div>
+      <p class="hero-description">Traverse the Dark Star ecosystem. Each celestial division represents a specialized discipline operating under shared branding, high-end motion, and dark luxury architecture.</p>
+      <a class="hero-recognition-signal" href="/recognition"><span>Q3 2026</span><strong>International Elite 100 Awards · Shortlisted</strong><small>Excellence in Strategic Innovation &amp; Ecosystem Architecture · North Carolina · USA</small></a>
+      <div class="scroll-indicator" aria-hidden="true"><span>Scroll to Explore</span><div class="scroll-indicator-arrow"></div></div>
     </section>
 
-    <!-- CELESTIAL DIVISION WORLDS FLOW -->
     <div class="universe-nodes-flow" aria-label="Ecosystem Division Worlds">
-
-      <!-- WORLD 1: DARK STAR WEB DEVELOPMENT -->
       <a href="https://websites.darkstarconsultinggroup.com" class="world-node-card node-web" id="world-web" target="_blank" rel="noopener noreferrer">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">01 · CYBER & DIGITAL DIVISION</span>
-          <h2 class="node-title">Dark Star Web Dev</h2>
-          <p class="node-tagline">
-            Engineered digital ecosystems, high-performance web concepts, managed cloud hosting, and custom digital operations for modern enterprises.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">01 · CYBER & DIGITAL DIVISION</span><h2 class="node-title">Dark Star Web Dev</h2><p class="node-tagline">Engineered digital ecosystems, high-performance web concepts, managed cloud hosting, and custom digital operations for modern enterprises.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
 
-      <!-- WORLD 2: DARK STAR CULINARY -->
       <a href="https://culinary.darkstarconsultinggroup.com" class="world-node-card node-culinary" id="world-culinary" target="_blank" rel="noopener noreferrer">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">02 · BESPOKE GASTRONOMY DIVISION</span>
-          <h2 class="node-title">Dark Star Culinary</h2>
-          <p class="node-tagline">
-            Bespoke tasting menus, private estate dining operations, sommelier pairings, and dark luxury culinary direction for exclusive occasions.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7-6.3-4.6-6.3 4.6 2.3-7-6-4.6h7.6z"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">02 · CULINARY & HOSPITALITY OPERATIONS</span><h2 class="node-title">Dark Star Culinary</h2><p class="node-tagline">Chef-led restaurant consulting, menu development, kitchen systems, supplier sourcing, operational improvement, and private hospitality.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
 
-      <!-- WORLD 3: DSC USDA -->
       <a href="https://usda.darkstarconsultinggroup.com" class="world-node-card node-usda" id="world-usda" target="_blank" rel="noopener noreferrer">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">03 · TERRESTRIAL FIELD COMPLIANCE</span>
-          <h2 class="node-title">DSC USDA</h2>
-          <p class="node-tagline">
-            Field-tested hemp sampling agent operations, pre-harvest lot collection, and official chain-of-custody dispatch for commercial producers.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">03 · TERRESTRIAL FIELD COMPLIANCE</span><h2 class="node-title">DSC USDA</h2><p class="node-tagline">Field-tested hemp sampling agent operations, pre-harvest lot collection, and official chain-of-custody dispatch for commercial producers.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
 
-      <!-- WORLD 4: DARK STAR LITERARY -->
       <a href="https://literaryagency.darkstarconsultinggroup.com" class="world-node-card node-literary" id="world-literary" target="_blank" rel="noopener noreferrer">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5H6.5A2.5 2.5 0 0 0 4 19.5z"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">04 · NARRATIVE ARCHIVE & PUBLISHING</span>
-          <h2 class="node-title">Dark Star Literary</h2>
-          <p class="node-tagline">
-            Literary representation agency, expansive book catalog, illustrated children's fiction series, and master storytelling property.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zM4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5H6.5A2.5 2.5 0 0 0 4 19.5z"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">04 · NARRATIVE ARCHIVE & PUBLISHING</span><h2 class="node-title">Dark Star Literary</h2><p class="node-tagline">Literary representation agency, expansive book catalog, illustrated children's fiction series, and master storytelling property.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
 
-      <!-- WORLD 5: DSC ART -->
       <a href="https://art.darkstarconsultinggroup.com" class="world-node-card node-art" id="world-art" target="_blank" rel="noopener noreferrer">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10"/>
-            <circle cx="12" cy="12" r="4"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">05 · URBANHIPPIEART & GALLERY</span>
-          <h2 class="node-title">DSC Art</h2>
-          <p class="node-tagline">
-            Contemporary gallery representation agency, visual art direction, and fine art curation — featuring flagship artist UrbanHippieArt.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">05 · URBANHIPPIEART & GALLERY</span><h2 class="node-title">DSC Art</h2><p class="node-tagline">Contemporary gallery representation agency, visual art direction, and fine art curation — featuring flagship artist UrbanHippieArt.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
 
-      <!-- WORLD 6: APPLICATION DEVELOPMENT -->
       <a href="https://appdevelopment.darkstarconsultinggroup.com" class="world-node-card node-appdev" id="world-appdev" target="_blank" rel="noopener noreferrer" aria-labelledby="world-appdev-title">
-        <div class="node-mark-badge">
-          <svg class="node-svg-icon" viewBox="0 0 24 24">
-            <rect x="3" y="3" width="7" height="7" rx="1"/>
-            <rect x="14" y="3" width="7" height="7" rx="1"/>
-            <rect x="3" y="14" width="7" height="7" rx="1"/>
-            <rect x="14" y="14" width="7" height="7" rx="1"/>
-          </svg>
-        </div>
-        <div class="node-content">
-          <span class="node-header-tag">06 · APPLICATION & PRODUCT DEVELOPMENT</span>
-          <h2 class="node-title" id="world-appdev-title">Application Development</h2>
-          <p class="node-tagline">
-            Purpose-built software products, decision-support applications, operational tools, and standalone digital systems developed under Dark Star Consulting Group.
-          </p>
-          <span class="node-cta-bar">Enter World <span>↗</span></span>
-        </div>
+        <div class="node-mark-badge"><svg class="node-svg-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <div class="node-content"><span class="node-header-tag">06 · APPLICATION & PRODUCT DEVELOPMENT</span><h2 class="node-title" id="world-appdev-title">Application Development</h2><p class="node-tagline">Purpose-built software products, decision-support applications, operational tools, and standalone digital systems developed under Dark Star Consulting Group.</p><span class="node-cta-bar">Enter World <span>↗</span></span></div>
       </a>
-
     </div>
 
+    <section class="corporate-recognition-section" aria-labelledby="restaurant-consulting-title">
+      <div class="recognition-signal-ring" aria-hidden="true"><svg viewBox="0 0 100 100"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg></div>
+      <div class="corporate-recognition-copy"><span class="node-header-tag">FEATURED CAPABILITY · DARK STAR CULINARY</span><h2 id="restaurant-consulting-title">Restaurant Consulting</h2><p>Chef-led operational consulting for new openings, existing restaurants, and relaunches: menu and food-cost work, kitchen systems, standards, training, sourcing, workflow, and opening readiness.</p><a href="https://culinary.darkstarconsultinggroup.com/restaurant-consulting.html">Explore Restaurant Consulting <span aria-hidden="true">↗</span></a></div>
+    </section>
+
     <section class="corporate-supplier-section" aria-labelledby="corporate-supplier-title">
-      <div class="supplier-signal-ring" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M4 4h16v16H4zM7 8h10M7 12h10M7 16h6"/>
-        </svg>
-      </div>
-      <div class="corporate-supplier-copy">
-        <span class="node-header-tag">CORPORATE RESOURCE · SUPPLIERS & MANUFACTURERS</span>
-        <h2 id="corporate-supplier-title">Business & Supplier Profile</h2>
-        <p>Company overview, commercial channels, current product-sourcing focus, supplier evaluation criteria, and sample-shipping policy for manufacturers and product partners.</p>
-        <a href="/supplier-profile">View Supplier Profile <span aria-hidden="true">↗</span></a>
-      </div>
+      <div class="supplier-signal-ring" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM7 8h10M7 12h10M7 16h6"/></svg></div>
+      <div class="corporate-supplier-copy"><span class="node-header-tag">CORPORATE RESOURCE · SUPPLIERS & MANUFACTURERS</span><h2 id="corporate-supplier-title">Business & Supplier Profile</h2><p>Company overview, commercial channels, current product-sourcing focus, supplier evaluation criteria, and sample-shipping policy for manufacturers and product partners.</p><a href="/supplier-profile">View Supplier Profile <span aria-hidden="true">↗</span></a></div>
     </section>
 
     <section class="corporate-recognition-section" aria-labelledby="corporate-recognition-title">
-      <div class="recognition-signal-ring" aria-hidden="true">
-        <svg viewBox="0 0 100 100"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg>
-      </div>
-      <div class="corporate-recognition-copy">
-        <span class="node-header-tag">EXTERNAL RECOGNITION · Q3 2026</span>
-        <h2 id="corporate-recognition-title">Dark Star Consulting Group shortlisted for International Elite 100.</h2>
-        <p>Excellence in Strategic Innovation &amp; Ecosystem Architecture · North Carolina · USA.</p>
-        <a href="/recognition">Explore Awards &amp; Recognition <span aria-hidden="true">↗</span></a>
-      </div>
+      <div class="recognition-signal-ring" aria-hidden="true"><svg viewBox="0 0 100 100"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg></div>
+      <div class="corporate-recognition-copy"><span class="node-header-tag">EXTERNAL RECOGNITION · Q3 2026</span><h2 id="corporate-recognition-title">Dark Star Consulting Group shortlisted for International Elite 100.</h2><p>Excellence in Strategic Innovation &amp; Ecosystem Architecture · North Carolina · USA.</p><a href="/recognition">Explore Awards &amp; Recognition <span aria-hidden="true">↗</span></a></div>
     </section>
-
   </main>
 
   <script type="module" src="/src/universe-engine.js"></script>
