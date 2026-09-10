@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Consulting | Dark Star Consulting Group</title>
+  <meta name="description" content="Restaurant consulting from Dark Star Consulting Group for openings, existing operations, relaunches, menu systems, food cost, kitchen workflow, training, sourcing, and operational improvement.">
+  <link rel="canonical" href="https://darkstarconsultinggroup.com/restaurant-consulting">
+  <meta property="og:title" content="Restaurant Consulting | Dark Star Consulting Group">
+  <meta property="og:description" content="Practical restaurant consulting for openings, existing operations, relaunches, menu systems, food cost, kitchen workflow, training, sourcing, and operational improvement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://darkstarconsultinggroup.com/restaurant-consulting">
+  <meta name="theme-color" content="#030306">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    .consulting-shell{position:relative;z-index:10;max-width:1180px;margin:0 auto;padding:8.5rem 1.5rem 5rem}
+    .consulting-nav{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 2.5rem;background:linear-gradient(180deg,rgba(3,3,6,.97),rgba(3,3,6,.72));backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .consulting-nav a{color:#fff;text-decoration:none}.consulting-brand{display:flex;align-items:center;gap:.8rem;font-family:var(--font-display);font-weight:800;letter-spacing:.14em;font-size:.85rem}.consulting-mark{width:26px;height:26px;fill:var(--accent-gold);filter:drop-shadow(0 0 9px var(--accent-gold))}.back-link{font-family:var(--font-display);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-gold)!important}
+    .consulting-hero{min-height:62vh;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.75fr);gap:2.5rem;align-items:center;padding:2.5rem 0 3.5rem}
+    .kicker{font-family:var(--font-display);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-gold);font-weight:700;margin-bottom:1.1rem}.consulting-title{font-family:var(--font-display);font-size:clamp(2.3rem,5.8vw,5.1rem);line-height:1.02;text-transform:uppercase;max-width:900px;margin:0 0 1.4rem}.lede{max-width:760px;color:var(--text-muted);font-size:1.08rem;line-height:1.85}.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.9rem}.primary-action,.secondary-action{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-family:var(--font-display);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;padding:.88rem 1.05rem;border:1px solid rgba(223,178,96,.5)}.primary-action{background:var(--accent-gold);color:#050608;border-color:#f0cb88}.secondary-action{color:#fff;background:rgba(255,255,255,.025)}
+    .snapshot{background:rgba(8,10,16,.86);border:1px solid rgba(223,178,96,.34);padding:1.7rem;box-shadow:0 25px 70px rgba(0,0,0,.5),0 0 40px rgba(223,178,96,.06)}.snapshot h2{font-family:var(--font-display);font-size:1.08rem;text-transform:uppercase;line-height:1.45;margin:.25rem 0 1.35rem}.snapshot ul{list-style:none;display:grid;gap:.95rem}.snapshot li{padding-top:.9rem;border-top:1px solid var(--border-muted);color:var(--text-muted);line-height:1.55}.snapshot strong{display:block;color:#fff;font-family:var(--font-display);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.28rem}
+    .section-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;margin:0 0 2rem}.section-nav a{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.8rem .9rem;border:1px solid var(--border-muted);background:rgba(8,10,16,.76);color:var(--text-muted);text-decoration:none;font-family:var(--font-display);font-size:.61rem;letter-spacing:.1em;text-transform:uppercase}.section-nav span{color:var(--accent-gold)}
+    .section-block{padding:4.5rem 0 0;border-top:1px solid rgba(255,255,255,.07)}.section-block:first-of-type{border-top:0}.section-block h2{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.15rem);text-transform:uppercase;margin:.4rem 0 1rem}.section-copy{color:var(--text-muted);line-height:1.8;max-width:830px}
+    .stage-grid,.capability-grid,.deliverable-grid{display:grid;gap:1rem;margin-top:2.2rem}.stage-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.capability-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.deliverable-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.025),transparent 28%),rgba(8,10,16,.84);border:1px solid var(--border-muted);padding:1.65rem;min-height:100%;overflow:hidden}.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--card-accent,var(--accent-gold));opacity:.78}.card small{display:block;font-family:var(--font-display);font-size:.61rem;line-height:1.5;letter-spacing:.13em;color:var(--card-accent,var(--accent-gold))}.card h3{font-family:var(--font-display);font-size:1rem;text-transform:uppercase;margin:.72rem 0}.card p,.card li{color:var(--text-muted);font-size:.93rem;line-height:1.7}.card ul{margin:.8rem 0 0 1.05rem}.stage-grid .card:nth-child(2),.capability-grid .card:nth-child(2),.capability-grid .card:nth-child(5){--card-accent:var(--accent-cyan)}.stage-grid .card:nth-child(3),.capability-grid .card:nth-child(3),.capability-grid .card:nth-child(6){--card-accent:var(--accent-emerald)}.capability-grid .card:nth-child(4){--card-accent:var(--accent-purple)}
+    .diagnostic{margin-top:2.2rem;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:1rem}.diagnostic-main,.diagnostic-side{padding:1.8rem;background:rgba(8,10,16,.86);border:1px solid var(--border-muted)}.diagnostic-main{border-color:rgba(223,178,96,.35)}.diagnostic-side{border-color:rgba(6,182,212,.28)}.diagnostic h3{font-family:var(--font-display);font-size:1.05rem;text-transform:uppercase;margin-bottom:.8rem}.diagnostic p,.diagnostic li{color:var(--text-muted);line-height:1.75}.diagnostic ul{margin:1rem 0 0 1.1rem}
+    .ecosystem-panel{margin-top:2.2rem;padding:2rem;background:radial-gradient(circle at 90% 10%,rgba(99,102,241,.13),transparent 38%),rgba(8,10,16,.88);border:1px solid rgba(99,102,241,.3)}.ecosystem-panel h3{font-family:var(--font-display);font-size:clamp(1.25rem,3vw,2rem);text-transform:uppercase;margin:.3rem 0 .9rem}.ecosystem-panel p{color:var(--text-muted);line-height:1.8;max-width:880px}.ecosystem-links{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1.25rem}.ecosystem-links a{font-family:var(--font-display);font-size:.62rem;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.13);padding:.7rem .8rem;background:rgba(255,255,255,.025)}
+    .contact-panel{margin-top:5rem;padding:2rem;border:1px solid rgba(223,178,96,.38);background:radial-gradient(circle at 90% 10%,rgba(223,178,96,.13),transparent 38%),rgba(8,10,16,.9);display:flex;justify-content:space-between;align-items:center;gap:2rem}.contact-panel h2{font-family:var(--font-display);font-size:clamp(1.35rem,3vw,2.2rem);text-transform:uppercase;margin:.3rem 0 .8rem}.contact-panel p{max-width:760px;color:var(--text-muted);line-height:1.7}.contact-button{flex:0 0 auto;font-family:var(--font-display);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#050608!important;background:var(--accent-gold);padding:.9rem 1.1rem;border:1px solid #f0cb88;box-shadow:0 0 24px rgba(223,178,96,.18)}
+    .consulting-footer{margin-top:5rem;padding-top:2rem;border-top:1px solid var(--border-muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--text-dim);font-size:.82rem}.consulting-footer a{color:var(--accent-gold);text-decoration:none}
+    @media(max-width:900px){.consulting-hero{grid-template-columns:1fr;min-height:auto}.stage-grid,.deliverable-grid{grid-template-columns:1fr}.capability-grid{grid-template-columns:1fr 1fr}.diagnostic{grid-template-columns:1fr}.section-nav{grid-template-columns:1fr 1fr}.contact-panel{align-items:flex-start;flex-direction:column}}
+    @media(max-width:680px){.consulting-nav{padding:1rem 1.2rem}.consulting-brand span{display:none}.consulting-shell{padding-top:6.5rem}.consulting-title{font-size:clamp(2rem,10vw,3rem)}.capability-grid{grid-template-columns:1fr}.section-nav{grid-template-columns:1fr}.contact-button{width:100%;text-align:center}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Restaurant Consulting",
+    "provider":{"@type":"Organization","name":"Dark Star Consulting Group, LLC","url":"https://darkstarconsultinggroup.com/"},
+    "areaServed":{"@type":"Country","name":"United States"},
+    "serviceType":"Restaurant consulting and operational advisory"
+  }
+  </script>
+</head>
+<body>
+  <canvas id="universe-canvas"></canvas>
+  <header class="consulting-nav">
+    <a class="consulting-brand" href="/"><svg class="consulting-mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg><span>DARK STAR CONSULTING GROUP</span></a>
+    <a class="back-link" href="/">Return to Universe ↗</a>
+  </header>
+
+  <main class="consulting-shell">
+    <section class="consulting-hero">
+      <div>
+        <div class="kicker">Restaurant Consulting · DSCG</div>
+        <h1 class="consulting-title">Restaurants have to work when the doors open.</h1>
+        <p class="lede">Dark Star Consulting Group works with restaurant owners and operators on the systems behind service: concept and menu structure, food cost, kitchen workflow, standards, training, sourcing, operational review, openings, and relaunches. The objective is not theoretical hospitality. It is an operation that can execute consistently under real service conditions.</p>
+        <div class="hero-actions"><a class="primary-action" href="mailto:darkstar@darkstarconsultinggroup.com?subject=Restaurant%20Consulting%20Inquiry">Start a Consulting Project ↗</a><a class="secondary-action" href="#capabilities">Explore Capabilities ↓</a></div>
+      </div>
+      <aside class="snapshot" aria-label="Restaurant consulting engagement types">
+        <div class="kicker">Engagement Snapshot</div>
+        <h2>Built for the stage the restaurant is actually in.</h2>
+        <ul><li><strong>Opening</strong>Concept, menu, systems, sourcing, standards, and readiness before service begins.</li><li><strong>Operating</strong>Targeted work on cost, workflow, consistency, training, menu performance, or operational friction.</li><li><strong>Relaunching</strong>Structured reset for restaurants changing concept, menu, systems, team standards, or operating direction.</li></ul>
+      </aside>
+    </section>
+
+    <nav class="section-nav" aria-label="Restaurant consulting sections"><a href="#engagements">Engagements <span>↓</span></a><a href="#capabilities">Capabilities <span>↓</span></a><a href="#deliverables">Deliverables <span>↓</span></a><a href="#contact">Start a Project <span>↓</span></a></nav>
+
+    <section class="section-block" id="engagements">
+      <div class="kicker">Where We Enter</div><h2>New, operating, or rebuilding.</h2><p class="section-copy">Restaurant problems change depending on where the business is in its lifecycle. Consulting starts with that reality rather than forcing every operator through the same prefab package.</p>
+      <div class="stage-grid"><article class="card"><small>01 · OPENING / PRE-OPENING</small><h3>Build before service exposes the gaps.</h3><p>Concept alignment, menu structure, cost awareness, kitchen workflow, vendor needs, standards, training priorities, and opening-readiness planning.</p></article><article class="card"><small>02 · EXISTING OPERATIONS</small><h3>Fix the part that is actually costing you.</h3><p>Focused operational review for restaurants dealing with margin pressure, inconsistent execution, workflow problems, training gaps, menu drift, sourcing issues, or service friction.</p></article><article class="card"><small>03 · RELAUNCH / RESET</small><h3>Change direction without carrying every old problem forward.</h3><p>Operational reset for new menus, new concepts, leadership transitions, kitchen reorganization, standardization, supplier changes, or a broader relaunch.</p></article></div>
+    </section>
+
+    <section class="section-block" id="capabilities">
+      <div class="kicker">Consulting Capabilities</div><h2>The restaurant as an operating system.</h2><p class="section-copy">Food, labor, equipment, purchasing, prep, training, timing, and guest experience are not separate planets. They collide every service. The consulting work treats them as one connected operation.</p>
+      <div class="capability-grid">
+        <article class="card"><small>01</small><h3>Menu & Concept Development</h3><p>Menu architecture, dish development, concept alignment, practical execution, seasonal refinement, and menu decisions grounded in the restaurant rather than abstract creativity.</p></article>
+        <article class="card"><small>02</small><h3>Menu Engineering & Food Cost</h3><p>Recipe structure, portion discipline, ingredient utilization, pricing context, yield awareness, menu mix, and identifying items whose economics do not match their role.</p></article>
+        <article class="card"><small>03</small><h3>Kitchen Operations & Workflow</h3><p>Prep systems, station flow, production sequencing, pars, handoffs, service timing, sanitation discipline, and practical recommendations around how work moves through the kitchen.</p></article>
+        <article class="card"><small>04</small><h3>SOPs, Training & Standards</h3><p>Repeatable procedures, recipe and plating standards, opening and closing systems, role clarity, training materials, accountability points, and consistency controls.</p></article>
+        <article class="card"><small>05</small><h3>Vendor & Supplier Sourcing</h3><p>Product specifications, supplier comparison, sourcing alternatives, packaging or equipment needs, and client-directed vendor research when the operation needs better-fit options.</p></article>
+        <article class="card"><small>06</small><h3>Opening & Relaunch Support</h3><p>Readiness planning, operating checklists, menu and station validation, training priorities, purchasing needs, launch sequencing, and support for the transition into live service.</p></article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="kicker">Operational Review</div><h2>Start by finding the real bottleneck.</h2><p class="section-copy">An owner may feel the symptoms before the cause is obvious. An operational review is the lower-friction starting point: examine the system, identify what is creating the most drag, and separate expensive noise from the changes that actually deserve attention.</p>
+      <div class="diagnostic"><div class="diagnostic-main"><h3>Review areas can include</h3><ul><li>Menu structure, recipe execution, food cost and ingredient utilization</li><li>Prep, production, station flow and service timing</li><li>Purchasing, pars, vendor fit and product specifications</li><li>Training, standards, consistency and role clarity</li><li>Guest-facing execution and the operational causes behind recurring service issues</li></ul></div><aside class="diagnostic-side"><h3>The output</h3><p>A prioritized operating picture: what is working, what is not, where the meaningful risks or leaks are, and what should be addressed first. Scope can stop there or move into implementation.</p></aside></div>
+    </section>
+
+    <section class="section-block" id="deliverables">
+      <div class="kicker">Work Product</div><h2>Useful things, not consulting vapor.</h2><p class="section-copy">The exact deliverables depend on scope, but engagements are built around concrete operating work rather than a deck full of nouns.</p>
+      <div class="deliverable-grid"><article class="card"><small>OPERATING SYSTEMS</small><h3>Standards & Controls</h3><ul><li>Recipe and plating standards</li><li>Prep and production systems</li><li>Pars and ordering structure</li><li>Opening / closing standards</li></ul></article><article class="card"><small>MENU & COST</small><h3>Menu Work</h3><ul><li>Menu architecture</li><li>Costed recipe frameworks</li><li>Portion / yield review</li><li>Menu refinement priorities</li></ul></article><article class="card"><small>PEOPLE & LAUNCH</small><h3>Execution Tools</h3><ul><li>Training materials</li><li>Opening-readiness checklists</li><li>Vendor / spec comparisons</li><li>Prioritized action plans</li></ul></article></div>
+    </section>
+
+    <section class="section-block">
+      <div class="kicker">DSCG Ecosystem</div><h2>When the restaurant problem crosses disciplines.</h2><p class="section-copy">Restaurant Consulting is its own DSCG service. When a project genuinely requires work beyond restaurant operations, it can connect to other Dark Star capabilities without pretending those disciplines are the same thing.</p>
+      <div class="ecosystem-panel"><h3>Connected when the scope calls for it.</h3><p>Examples include a restaurant website or digital ordering presence through Dark Star Web Development, purpose-built operational software through Application Development, or broader supplier research through DSCG's client-directed sourcing work. Those services remain distinct and are brought in only when useful to the restaurant engagement.</p><div class="ecosystem-links"><a href="https://websites.darkstarconsultinggroup.com">Web Development ↗</a><a href="https://appdevelopment.darkstarconsultinggroup.com">Application Development ↗</a><a href="/supplier-profile">Supplier Profile ↗</a></div></div>
+    </section>
+
+    <section class="contact-panel" id="contact"><div><div class="kicker">Restaurant Consulting Desk</div><h2>Tell us what the operation needs.</h2><p>For an opening, operational review, menu or cost project, sourcing issue, training / systems engagement, or restaurant relaunch, start with the restaurant, location, current stage, and the problem you want solved.</p></div><a class="contact-button" href="mailto:darkstar@darkstarconsultinggroup.com?subject=Restaurant%20Consulting%20Inquiry">Start an Inquiry ↗</a></section>
+
+    <footer class="consulting-footer"><span>© 2026 Dark Star Consulting Group, LLC · Charlotte, NC</span><span><a href="mailto:darkstar@darkstarconsultinggroup.com">darkstar@darkstarconsultinggroup.com</a> · <a href="/">Dark Star Universe</a></span></footer>
+  </main>
+  <script type="module" src="/src/universe-engine.js"></script>
+</body>
+</html>
