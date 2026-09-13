@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "check:static": "node scripts/check-static-contract.mjs",
+    "check": "npm run check:static && npm run build",
     "preview": "vite preview"
   },
   "devDependencies": {
