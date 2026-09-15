@@ -511,6 +511,14 @@ body {
   fill: var(--accent-gold);
   filter: drop-shadow(0 0 9px var(--accent-gold));
 }
+.recognition-badge-home {
+  display: block;
+  width: 86px;
+  height: 86px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 10px rgba(223,178,96,.22));
+}
 .corporate-recognition-copy h2 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.35rem);

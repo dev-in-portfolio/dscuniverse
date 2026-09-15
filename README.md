@@ -3,7 +3,7 @@
 **Centerpiece Interactive Animated Navigation Hub** for the Dark Star Ecosystem.
 
 ## Overview
-`dscuniverse` connects all six Dark Star divisions within an immersive, high-performance 3D spatial canvas.
+`dscuniverse` connects all seven Dark Star worlds within an immersive, high-performance 3D spatial canvas.
 
 ## Connected Ecosystem Nodes & Public Destinations
 1. **Dark Star Web Development (DSC)**: `https://websites.darkstarconsultinggroup.com`
@@ -12,6 +12,7 @@
 4. **Dark Star Literary Agency**: `https://literaryagency.darkstarconsultinggroup.com`
 5. **Dark Star Art**: `https://art.darkstarconsultinggroup.com`
 6. **Application Development**: `https://appdevelopment.darkstarconsultinggroup.com` — DSCG application/product development division. **Coverage Compass** is the first flagship app at `https://coveragecompass.darkstarconsultinggroup.com`.
+7. **Restaurant Consulting**: `/restaurant-consulting` — restaurant operations and strategy consulting within the DSCG corporate ecosystem.
 
 ## Animation Architecture & Reuse
 Adapted from the user's `Animations` repository (`dev-in-portfolio/Animations`):
