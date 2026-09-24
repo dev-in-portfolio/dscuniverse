@@ -492,14 +492,14 @@ body {
   padding: 3rem 1.5rem;
   border-top: 1px solid var(--border-muted);
   display: grid;
-  grid-template-columns: 110px 1fr;
+  grid-template-columns: 120px minmax(0, 1fr);
   gap: 2rem;
   align-items: center;
 }
 .recognition-signal-ring {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
+  width: 112px;
+  min-height: 104px;
+  border-radius: 12px;
   border: 1px solid var(--accent-gold);
   display: grid;
   place-items: center;
@@ -513,11 +513,10 @@ body {
 }
 .recognition-badge-home {
   display: block;
-  width: 86px;
-  height: 86px;
+  width: 100px;
+  height: auto;
   object-fit: contain;
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 0 10px rgba(223,178,96,.22));
+  filter: drop-shadow(0 0 10px rgba(223,178,96,.18));
 }
 .corporate-recognition-copy h2 {
   font-family: var(--font-display);
