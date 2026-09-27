@@ -519,6 +519,18 @@ body {
   mix-blend-mode: screen;
   filter: drop-shadow(0 0 10px rgba(223,178,96,.22));
 }
+.recognition-badge-pair {
+  display: flex;
+  gap: 0.35rem;
+}
+.recognition-badge-pair .recognition-badge-home {
+  width: 40px;
+  height: 40px;
+}
+.recognition-badge-pair .recognition-badge-prestige {
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 8px rgba(242,72,28,.18));
+}
 .corporate-recognition-copy h2 {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.35rem);
