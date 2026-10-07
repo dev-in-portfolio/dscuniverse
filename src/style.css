@@ -518,17 +518,28 @@ body {
   object-fit: contain;
   filter: drop-shadow(0 0 10px rgba(223,178,96,.18));
 }
-.recognition-badge-pair {
-  display: flex;
-  gap: 0.35rem;
+.recognition-badge-set {
+  display: grid;
+  grid-template-columns: 40px 40px;
+  grid-template-rows: 40px 28px;
+  gap: 0.15rem 0.3rem;
+  justify-items: center;
+  align-items: center;
 }
-.recognition-badge-pair .recognition-badge-home {
+.recognition-badge-set .recognition-badge-home {
   width: 40px;
   height: 40px;
 }
-.recognition-badge-pair .recognition-badge-prestige {
+.recognition-badge-set .recognition-badge-prestige {
   mix-blend-mode: normal;
   filter: drop-shadow(0 0 8px rgba(242,72,28,.18));
+}
+.recognition-badge-set .recognition-badge-corporate-vision {
+  grid-column: 1 / -1;
+  width: 62px;
+  height: auto;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 7px rgba(68,211,220,.16));
 }
 .corporate-recognition-copy h2 {
   font-family: var(--font-display);
