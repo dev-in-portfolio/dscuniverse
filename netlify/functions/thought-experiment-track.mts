@@ -10,9 +10,21 @@ const json = (body: unknown, status = 200) =>
 export default async function trackDocumentClick(request: Request) {
   if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
 
-  // Browser clicks are same-origin POSTs. Reject cross-site submissions.
+  // Same-origin Beacon requests may omit Origin in some browsers/WebViews.
+  // Fetch Metadata identifies those browser requests without trusting an
+  // arbitrary missing Origin header from a cross-site submission.
   const origin = request.headers.get('origin');
-  if (origin !== new URL(request.url).origin) {
+  const fetchSite = request.headers.get('sec-fetch-site');
+  const sameOrigin = new URL(request.url).origin;
+  const referer = request.headers.get('referer');
+  const sameOriginReferrer = (() => {
+    try { return referer !== null && new URL(referer).origin === sameOrigin; }
+    catch { return false; }
+  })();
+  if (
+    (origin !== null && origin !== sameOrigin) ||
+    (origin === null && fetchSite !== 'same-origin' && !(fetchSite === null && sameOriginReferrer))
+  ) {
     return json({ error: 'Cross-origin requests are not accepted' }, 403);
   }
 
