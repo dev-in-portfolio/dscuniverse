@@ -83,14 +83,43 @@
     .context-panel ul{padding-left:19px;margin:0}
     .context-panel li+li{margin-top:8px}
     .context-panel.emphasis{border-color:var(--hair);background:linear-gradient(145deg,rgba(56,41,22,.23),rgba(13,19,28,.8))}
+
+    .reader-guide{padding:0 0 94px}
+    .guide-intro{max-width:790px;color:#bdc8d5;font-size:15px;line-height:1.85;margin:0 0 27px}
+    .guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .guide-card{border:1px solid rgba(255,255,255,.17);border-radius:9px;background:linear-gradient(150deg,rgba(21,29,44,.89),rgba(9,14,23,.89));overflow:hidden}
+    .guide-card[open]{border-color:rgba(223,178,96,.49)}
+    .guide-card summary{display:flex;align-items:center;gap:18px;padding:23px;cursor:pointer;list-style:none;min-height:112px}
+    .guide-card summary::-webkit-details-marker{display:none}
+    .guide-card summary:focus-visible{outline:2px solid var(--cyan);outline-offset:-4px}
+    .guide-index{font:800 27px Orbitron,sans-serif;color:var(--gold);align-self:flex-start;padding-top:2px}
+    .guide-name{font:700 15px/1.45 Orbitron,sans-serif;color:var(--text)}
+    .guide-name small{display:block;margin-top:7px;color:var(--cyan);font:700 10px/1.6 Orbitron,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+    .guide-expand{margin-left:auto;flex-shrink:0;color:var(--gold);font:400 25px/1 system-ui;transition:transform .18s ease}
+    .guide-card[open] .guide-expand{transform:rotate(45deg)}
+    .guide-body{border-top:1px solid var(--hair);padding:19px 24px 23px;color:#b8c4d2;font-size:13px;line-height:1.85}
+    .guide-body p{margin-bottom:12px}
+    .guide-body ul{margin:0 0 14px;padding-left:20px}
+    .guide-body li+li{margin-top:5px}
+    .guide-audience{color:#dee5ed;margin:0!important}
+    .guide-audience strong{color:var(--gold)}
+    .guide-legend{margin-top:23px;border:1px solid var(--hair);border-radius:9px;padding:28px;background:linear-gradient(120deg,rgba(47,37,23,.27),rgba(13,22,33,.8))}
+    .guide-legend h3{font-size:17px;margin:0 0 11px}
+    .guide-legend p{color:#c4cfdb;font-size:13px;line-height:1.85;margin:15px 0 0}
+    .scenario-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:19px 0}
+    .scenario{background:rgba(6,10,18,.6);border:1px solid rgba(255,255,255,.11);border-radius:5px;padding:14px}
+    .scenario strong{font:800 21px Orbitron,sans-serif;color:var(--gold);display:block}
+    .scenario span{display:block;font-size:12px;line-height:1.6;color:#d0d9e3;margin-top:7px}
+    .guide-legend .guide-verdict{border-top:1px solid var(--hair);padding-top:15px}
+    .guide-legend .guide-verdict strong{color:var(--gold)}
     .closing{padding:47px 0 80px;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;gap:24px}
     .closing h2{font-size:22px;margin:0 0 8px}
     .closing p{font-size:14px;color:var(--muted);margin:0}
     .footer{border-top:1px solid rgba(255,255,255,.1);padding:23px 0 35px;color:#8493a4;font-size:11px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px}
     .footer a{text-decoration:none}
-    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:32px}.hero{padding:78px 0 56px}.stats{margin-bottom:65px}.document{grid-template-columns:53px 1fr}.document .actions{grid-column:2;justify-content:flex-start}.section-heading{align-items:start;flex-direction:column}.section-note{text-align:left}.feature{grid-template-columns:1fr}.cover{min-height:250px}.cover-number{font-size:53px}.cover-foot strong{font-size:20px}}
-    @media(max-width:580px){.wrap{width:min(100% - 32px,1160px)}.head-inner{min-height:74px}.brand strong{font-size:10px}.brand small{font-size:7px}.brand-mark{width:27px}.back{font-size:10px}.hero{padding:55px 0}.hero-lede{line-height:1.7}.hero-side{padding-left:17px}.stats{gap:12px}.stat{display:block}.stat strong{display:block;font-size:24px;margin-bottom:4px}.stat span{font-size:11px}.feature-copy{padding:26px}.cover{padding:25px}.library{padding:65px 0}.document{grid-template-columns:39px 1fr;gap:13px}.number{font-size:23px}.document h3{font-size:15px}.document .btn{min-width:0;padding:10px 16px}.context-grid{grid-template-columns:1fr}.context-panel{padding:24px}.closing{flex-direction:column;align-items:start;padding:40px 0 55px}.footer-inner{flex-direction:column;gap:7px}}
+    @media(max-width:850px){.reader-guide{padding-bottom:65px}.hero-grid{grid-template-columns:1fr;gap:32px}.hero{padding:78px 0 56px}.stats{margin-bottom:65px}.document{grid-template-columns:53px 1fr}.document .actions{grid-column:2;justify-content:flex-start}.section-heading{align-items:start;flex-direction:column}.section-note{text-align:left}.feature{grid-template-columns:1fr}.cover{min-height:250px}.cover-number{font-size:53px}.cover-foot strong{font-size:20px}}
+    @media(max-width:580px){.guide-grid{grid-template-columns:1fr}.guide-card summary{min-height:90px;padding:18px;gap:12px}.guide-body{padding:17px 20px 21px}.guide-name{font-size:13px}.guide-index{font-size:23px}.guide-legend{padding:21px}.scenario-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.reader-guide{padding-bottom:55px}.wrap{width:min(100% - 32px,1160px)}.head-inner{min-height:74px}.brand strong{font-size:10px}.brand small{font-size:7px}.brand-mark{width:27px}.back{font-size:10px}.hero{padding:55px 0}.hero-lede{line-height:1.7}.hero-side{padding-left:17px}.stats{gap:12px}.stat{display:block}.stat strong{display:block;font-size:24px;margin-bottom:4px}.stat span{font-size:11px}.feature-copy{padding:26px}.cover{padding:25px}.library{padding:65px 0}.document{grid-template-columns:39px 1fr;gap:13px}.number{font-size:23px}.document h3{font-size:15px}.document .btn{min-width:0;padding:10px 16px}.context-grid{grid-template-columns:1fr}.context-panel{padding:24px}.closing{flex-direction:column;align-items:start;padding:40px 0 55px}.footer-inner{flex-direction:column;gap:7px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
   <script data-dscg-analytics="true" data-property-id="dscg-main" data-environment="production" data-endpoint="https://analytics.darkstarconsultinggroup.com/api/collect" data-consent-mode="metadata-default" data-privacy-profile="standard" data-registry-version="1" src="https://analytics.darkstarconsultinggroup.com/tracker.js" defer></script>
@@ -130,6 +159,60 @@
         <div class="stat"><strong>100</strong><span>years in the extended financial horizon</span></div>
       </div>
     </div>
+
+    <section id="reading-guide" class="reader-guide wrap" aria-labelledby="guide-title">
+      <div class="section-heading">
+        <div><div class="eyebrow">A guide to the collection</div><h2 id="guide-title">How to Read This Research</h2></div>
+        <p class="section-note">Four documents, one proposal, four levels of examination. Open a card to see what each document covers.</p>
+      </div>
+      <p class="guide-intro">Start with the one-page brief. Continue into the conceptual study for the policy design, the century-long financial test for the sustainability question, or the technical dossier to check the evidence. You do not need to read every document to understand the proposal.</p>
+      <div class="guide-grid">
+        <details class="guide-card" open>
+          <summary><span class="guide-index">01</span><span class="guide-name">Executive Overview<small>1 page · Start here</small></span><span class="guide-expand" aria-hidden="true">+</span></summary>
+          <div class="guide-body">
+            <p>A quick orientation to the proposed system, the central cost comparison, and the four evidence gates before launch could be considered.</p>
+            <ul><li>What the proposal changes—and what it preserves.</li><li>What the current financial tests show.</li><li>What still requires independent validation.</li></ul>
+            <p class="guide-audience"><strong>Best for:</strong> Everyone, especially elected officials and time-constrained decision-makers.</p>
+          </div>
+        </details>
+        <details class="guide-card">
+          <summary><span class="guide-index">02</span><span class="guide-name">Conceptual Feasibility<small>32 pages · Understand the proposal</small></span><span class="guide-expand" aria-hidden="true">+</span></summary>
+          <div class="guide-body">
+            <p>The accessible 30-year study of the coverage design, 26 benefit areas, financing assumptions, provider capacity, and four comparison scenarios.</p>
+            <ul><li>How a public payer and independent providers would interact.</li><li>How coverage and regulated prices affect the model.</li><li>Why further development is justified but national launch is not.</li></ul>
+            <p class="guide-audience"><strong>Best for:</strong> Policy staff, health professionals, and readers assessing overall feasibility.</p>
+          </div>
+        </details>
+        <details class="guide-card">
+          <summary><span class="guide-index">03</span><span class="guide-name">100-Year Financial Analysis<small>14 pages · Test sustainability</small></span><span class="guide-expand" aria-hidden="true">+</span></summary>
+          <div class="guide-body">
+            <p>Extends the 30-year results through 2124 under explicit assumptions to test long-run spending and potential break-even points.</p>
+            <ul><li>Why the central model remains more expensive over 100 years.</li><li>How stronger price reductions change the mathematical result.</li><li>Why those alternatives are not verified savings forecasts.</li></ul>
+            <p class="guide-audience"><strong>Best for:</strong> Budget analysts, economists, and readers focused on long-term affordability.</p>
+          </div>
+        </details>
+        <details class="guide-card">
+          <summary><span class="guide-index">04</span><span class="guide-name">Complete Technical Assessment<small>187 pages · Audit the evidence</small></span><span class="guide-expand" aria-hidden="true">+</span></summary>
+          <div class="guide-body">
+            <p>The detailed technical record with assumptions, expenditure ledgers, source references, research limitations, corrections, and the preserved historical record.</p>
+            <ul><li>Trace the calculations and the scope of each source.</li><li>Inspect clinical capacity, provider economics, and financing constraints.</li><li>Distinguish current findings from superseded historical research.</li></ul>
+            <p class="guide-audience"><strong>Best for:</strong> Researchers, economists, legislative analysts, and independent technical reviewers.</p>
+          </div>
+        </details>
+      </div>
+      <div class="guide-legend">
+        <h3>How to interpret the financial comparisons</h3>
+        <p>The study compares coverage and payment rules under four scenarios:</p>
+        <div class="scenario-grid" aria-label="Four modeled healthcare scenarios">
+          <div class="scenario"><strong>A</strong><span>Existing coverage<br>Existing prices</span></div>
+          <div class="scenario"><strong>B</strong><span>Universal coverage<br>Existing prices</span></div>
+          <div class="scenario"><strong>C</strong><span>Existing coverage<br>Regulated prices</span></div>
+          <div class="scenario"><strong>D</strong><span>Universal coverage<br>Regulated prices</span></div>
+        </div>
+        <p><strong>D minus A</strong> is the principal spending comparison. A positive value means higher modeled national healthcare spending than business as usual; a negative value means lower modeled spending. These are all-payer national totals, not estimates of additional federal borrowing.</p>
+        <p class="guide-verdict"><strong>Current conclusion:</strong> The central model is more expensive than business as usual over both 30 and 100 years. Some stronger price-setting illustrations reverse the sign, but their reimbursement assumptions and real-world feasibility remain unverified. The research supports serious policy development and independent testing—not an immediate national launch.</p>
+      </div>
+    </section>
     <section id="start" class="wrap" aria-labelledby="start-title">
       <div class="section-heading">
         <div><div class="eyebrow">The best place to begin</div><h2 id="start-title">The Executive Policy Brief</h2></div>
