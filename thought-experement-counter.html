@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05070c">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Document Engagement | Dark Star Consulting Group</title>
+  <meta name="description" content="Private document engagement counts for the Universal Healthcare Thought Experiment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; --bg:#05070c; --panel:#101723; --gold:#dfb260; --cyan:#71cbd9; --text:#f5f5f2; --muted:#b1bed0; --hair:rgba(222,190,133,.22) }
+    * { box-sizing:border-box }
+    [hidden] { display:none!important }
+    body { min-height:100vh; margin:0; color:var(--text); background:radial-gradient(ellipse 55% 35% at 85% 3%,rgba(30,87,112,.28),transparent 75%),radial-gradient(ellipse 45% 40% at 4% 65%,rgba(125,88,36,.14),transparent 75%),var(--bg); font:400 15px/1.65 'Plus Jakarta Sans',system-ui,sans-serif }
+    body:before { content:""; position:fixed; pointer-events:none; z-index:-1; inset:0; opacity:.18; background-image:radial-gradient(circle,white .8px,transparent 1.3px); background-size:53px 67px; mask-image:linear-gradient(#000,transparent 85%) }
+    .wrap { width:min(1140px,calc(100% - 40px)); margin-inline:auto }
+    .site-head { border-bottom:1px solid rgba(255,255,255,.09); background:rgba(4,7,13,.72); backdrop-filter:blur(18px) }
+    .head-inner { min-height:84px; display:flex; justify-content:space-between; align-items:center; gap:20px }
+    .brand { display:inline-flex; align-items:center; gap:14px; text-decoration:none; color:var(--text) }
+    .brand-mark { width:35px; height:35px; fill:var(--gold); filter:drop-shadow(0 0 13px rgba(223,178,96,.36)) }
+    .brand strong { display:block; font:800 13px/1.5 Orbitron,sans-serif; letter-spacing:.13em }
+    .brand small { display:block; color:var(--gold); font:700 9px/1.4 Orbitron,sans-serif; letter-spacing:.2em }
+    .private-pill { color:var(--cyan); text-transform:uppercase; letter-spacing:.16em; font:700 10px Orbitron,sans-serif; border:1px solid rgba(113,203,217,.34); padding:10px 13px; border-radius:100px }
+    h1,h2,p { margin-top:0 }
+    h1,h2 { font-family:Orbitron,sans-serif; letter-spacing:-.025em }
+    h1 { font-size:clamp(31px,5.3vw,56px); line-height:1.2; margin:18px 0 14px }
+    h1 span { color:var(--gold) }
+    .eyebrow { color:var(--gold); font:700 11px Orbitron,sans-serif; text-transform:uppercase; letter-spacing:.19em }
+    .intro { color:#bdcad8; max-width:720px; font-size:15px; line-height:1.9 }
+    main { min-height:calc(100vh - 165px) }
+    .gate { width:min(490px,100%); margin:clamp(65px,13vh,125px) auto 110px; padding:clamp(26px,5vw,42px); border:1px solid var(--hair); border-radius:13px; background:linear-gradient(150deg,rgba(25,34,48,.92),rgba(9,13,22,.95)); box-shadow:0 24px 75px rgba(0,0,0,.32) }
+    .gate-icon { width:50px; height:50px; display:grid; place-items:center; border-radius:12px; border:1px solid var(--hair); color:var(--gold); font:800 23px Orbitron,sans-serif; margin-bottom:25px }
+    .gate h1 { font-size:clamp(25px,5vw,34px); margin-bottom:13px }
+    .gate p { color:var(--muted); font-size:14px; line-height:1.8; margin-bottom:27px }
+    label { display:block; color:#e0e6ed; font-weight:700; font-size:12px; margin:0 0 9px }
+    .pin-entry { display:flex; gap:11px }
+    input { min-width:0; flex:1; border:1px solid rgba(255,255,255,.29); border-radius:6px; padding:14px 17px; color:#fff; outline:none; background:#080e18; font:700 21px Orbitron,sans-serif; letter-spacing:.3em }
+    input:focus { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(113,203,217,.12) }
+    button { cursor:pointer; border:1px solid var(--gold); border-radius:6px; padding:13px 22px; background:var(--gold); color:#080d16; font:700 12px 'Plus Jakarta Sans',sans-serif; transition:background .15s,transform .15s }
+    button:hover { background:#edc783; transform:translateY(-1px) }
+    button:focus-visible { outline:2px solid var(--cyan); outline-offset:3px }
+    button:disabled { opacity:.6; cursor:wait; transform:none }
+    .secondary { color:#e0e7f0; background:transparent; border-color:rgba(255,255,255,.3) }
+    .secondary:hover { background:rgba(255,255,255,.08) }
+    .message { min-height:25px; color:#ffb9ad; font-size:12px; margin:13px 0 0!important }
+    .dashboard { padding:80px 0 95px }
+    .dashboard-head { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:31px }
+    .dashboard-head h1 { margin-bottom:15px }
+    .dashboard-controls { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; padding-bottom:4px }
+    .dashboard-sub { display:flex; flex-wrap:wrap; gap:10px 22px; align-items:center; color:var(--muted); font-size:12px; margin:0 0 25px }
+    .dashboard-sub strong { color:var(--gold); font-variant-numeric:tabular-nums }
+    .count-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px }
+    .metric { position:relative; min-height:177px; display:flex; flex-direction:column; justify-content:space-between; border:1px solid rgba(255,255,255,.15); border-radius:10px; padding:25px 28px; background:linear-gradient(140deg,rgba(23,33,49,.93),rgba(10,15,25,.9)); overflow:hidden }
+    .metric:after { content:""; position:absolute; right:-35px; top:-50px; width:170px; height:170px; border-radius:50%; background:radial-gradient(circle,rgba(223,178,96,.085),transparent 70%); pointer-events:none }
+    .metric.download { border-color:var(--hair) }
+    .metric-top { display:flex; justify-content:space-between; align-items:start; gap:16px; color:#c3cfdd }
+    .metric-name { font-size:12px; line-height:1.5; max-width:360px }
+    .doc-tag { color:var(--cyan); white-space:nowrap; font:700 10px Orbitron,sans-serif; letter-spacing:.1em }
+    .metric-bottom { display:flex; justify-content:space-between; align-items:end; gap:20px }
+    .metric-value { display:block; color:var(--gold); font:800 clamp(35px,4vw,53px)/1 Orbitron,sans-serif; font-variant-numeric:tabular-nums }
+    .metric-type { font:700 10px Orbitron,sans-serif; letter-spacing:.15em; text-transform:uppercase; color:#a6b9cb; padding-bottom:4px }
+    .explainer { margin-top:27px; padding:22px 25px; color:var(--muted); font-size:12px; line-height:1.85; border:1px solid var(--hair); border-radius:8px; background:rgba(9,15,24,.7) }
+    .footer { border-top:1px solid rgba(255,255,255,.1); padding:25px 0; color:#8898a9; font-size:11px }
+    @media(max-width:770px) { .dashboard-head { align-items:start; flex-direction:column } .dashboard-controls { justify-content:start } .count-grid { grid-template-columns:1fr } .dashboard { padding:55px 0 70px } }
+    @media(max-width:420px) { .brand strong { font-size:10px } .brand small { font-size:8px } .brand-mark { width:28px; height:28px } .private-pill { font-size:8px; padding:9px } .gate { margin:55px auto } .pin-entry { flex-direction:column } .metric { min-height:160px; padding:22px } }
+    @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important } }
+  </style>
+</head>
+<body>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/" aria-label="Dark Star Universe homepage">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,5 64,36 98,36 70,57 81,91 50,70 19,91 30,57 2,36 36,36"/></svg>
+        <span><strong>DARK STAR UNIVERSE</strong><small>RESEARCH &amp; IDEAS</small></span>
+      </a>
+      <span class="private-pill">Private dashboard</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="gate" id="pin-gate" aria-labelledby="gate-title">
+      <div class="gate-icon" aria-hidden="true">✦</div>
+      <div class="eyebrow">Restricted access</div>
+      <h1 id="gate-title">Enter your <span>PIN.</span></h1>
+      <p>This dashboard shows the eight document-button counters for the Universal Healthcare Thought Experiment.</p>
+      <form id="pin-form">
+        <label for="pin-input">Four-digit access PIN</label>
+        <div class="pin-entry">
+          <input id="pin-input" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="off" required aria-describedby="pin-message">
+          <button id="unlock-button" type="submit">Unlock counters</button>
+        </div>
+        <p class="message" id="pin-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="dashboard" id="dashboard" aria-labelledby="dashboard-title" hidden>
+      <div class="dashboard-head">
+        <div>
+          <div class="eyebrow">Universal healthcare · Thought experiment</div>
+          <h1 id="dashboard-title">Document <span>engagement.</span></h1>
+          <p class="intro">Separate View and Download counts for all four research documents.</p>
+        </div>
+        <div class="dashboard-controls">
+          <button id="refresh-button" class="secondary" type="button">↻ Refresh</button>
+          <button id="lock-button" class="secondary" type="button">Lock dashboard</button>
+        </div>
+      </div>
+      <p class="dashboard-sub" aria-live="polite"><span id="summary">Total recorded clicks: <strong>0</strong></span><span id="last-updated">Updating…</span></p>
+
+      <div class="count-grid" id="count-grid">
+        <article class="metric"><div class="metric-top"><span class="metric-name">Executive Policy Brief</span><span class="doc-tag">DOC 01</span></div><div class="metric-bottom"><strong class="metric-value" data-count="1-view">0</strong><span class="metric-type">View</span></div></article>
+        <article class="metric download"><div class="metric-top"><span class="metric-name">Executive Policy Brief</span><span class="doc-tag">DOC 01</span></div><div class="metric-bottom"><strong class="metric-value" data-count="1-download">0</strong><span class="metric-type">Download</span></div></article>
+        <article class="metric"><div class="metric-top"><span class="metric-name">Conceptual Feasibility</span><span class="doc-tag">DOC 02</span></div><div class="metric-bottom"><strong class="metric-value" data-count="2-view">0</strong><span class="metric-type">View</span></div></article>
+        <article class="metric download"><div class="metric-top"><span class="metric-name">Conceptual Feasibility</span><span class="doc-tag">DOC 02</span></div><div class="metric-bottom"><strong class="metric-value" data-count="2-download">0</strong><span class="metric-type">Download</span></div></article>
+        <article class="metric"><div class="metric-top"><span class="metric-name">100-Year Financial Analysis</span><span class="doc-tag">DOC 03</span></div><div class="metric-bottom"><strong class="metric-value" data-count="3-view">0</strong><span class="metric-type">View</span></div></article>
+        <article class="metric download"><div class="metric-top"><span class="metric-name">100-Year Financial Analysis</span><span class="doc-tag">DOC 03</span></div><div class="metric-bottom"><strong class="metric-value" data-count="3-download">0</strong><span class="metric-type">Download</span></div></article>
+        <article class="metric"><div class="metric-top"><span class="metric-name">Complete Technical Assessment</span><span class="doc-tag">DOC 04</span></div><div class="metric-bottom"><strong class="metric-value" data-count="4-view">0</strong><span class="metric-type">View</span></div></article>
+        <article class="metric download"><div class="metric-top"><span class="metric-name">Complete Technical Assessment</span><span class="doc-tag">DOC 04</span></div><div class="metric-bottom"><strong class="metric-value" data-count="4-download">0</strong><span class="metric-type">Download</span></div></article>
+      </div>
+      <p class="explainer">Counts begin when tracking is published. Each activated View or Download button records one event, including repeat clicks; a retried event cannot be counted twice. Visits directly to a PDF URL and PDFs sent as email attachments are not included. Totals refresh automatically every 30 seconds while this page is open.</p>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">© 2026 Dark Star Consulting Group LLC · Internal document engagement</div></footer>
+  <script type="module" src="/src/thought-experiment-counter.js"></script>
+</body>
+</html>

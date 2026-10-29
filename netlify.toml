@@ -30,6 +30,11 @@
   status = 200
 
 [[redirects]]
+  from = "/thought-experement-counter"
+  to = "/thought-experement-counter.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

@@ -11,6 +11,7 @@ export default defineConfig({
         supplierProfile: resolve(process.cwd(), 'supplier-profile.html'),
         restaurantConsulting: resolve(process.cwd(), 'restaurant-consulting.html'),
         thoughtExperiment: resolve(process.cwd(), 'thought-experiment.html'),
+        thoughtExperimentCounter: resolve(process.cwd(), 'thought-experement-counter.html'),
       },
     },
   },
