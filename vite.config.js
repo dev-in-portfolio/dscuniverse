@@ -10,6 +10,7 @@ export default defineConfig({
         recognition: resolve(process.cwd(), 'recognition.html'),
         supplierProfile: resolve(process.cwd(), 'supplier-profile.html'),
         restaurantConsulting: resolve(process.cwd(), 'restaurant-consulting.html'),
+        thoughtExperiment: resolve(process.cwd(), 'thought-experiment.html'),
       },
     },
   },
