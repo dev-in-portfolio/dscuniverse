@@ -63,6 +63,17 @@
     .metric-bottom { display:flex; justify-content:space-between; align-items:end; gap:20px }
     .metric-value { display:block; color:var(--gold); font:800 clamp(35px,4vw,53px)/1 Orbitron,sans-serif; font-variant-numeric:tabular-nums }
     .metric-type { font:700 10px Orbitron,sans-serif; letter-spacing:.15em; text-transform:uppercase; color:#a6b9cb; padding-bottom:4px }
+    .metric-history { position:relative; z-index:1; margin-top:18px; padding-top:10px; border-top:1px solid rgba(255,255,255,.11) }
+    .history-toggle { width:100%; display:flex; align-items:center; justify-content:space-between; border:0; border-radius:3px; padding:6px 0; color:var(--cyan); background:transparent; font-size:11px; letter-spacing:.03em; text-align:left }
+    .history-toggle:hover { background:transparent; color:#e2f8fa; transform:none; text-decoration:underline }
+    .history-panel { padding-top:12px }
+    .history-note { margin:0 0 10px; color:var(--muted); font-size:11px; line-height:1.5 }
+    .history-list { list-style:none; display:grid; gap:7px; margin:0; padding:0; max-height:320px; overflow-y:auto }
+    .history-list li { display:flex; align-items:center; gap:9px; padding:9px 10px; border:1px solid rgba(255,255,255,.10); border-radius:5px; background:rgba(5,10,19,.72); color:#e0e9f1; font-size:11px; font-variant-numeric:tabular-nums; line-height:1.45 }
+    .history-list li:before { content:""; width:5px; height:5px; flex:none; border-radius:50%; background:var(--gold) }
+    .history-status { margin:10px 0 0; min-height:16px; color:var(--muted); font-size:11px; line-height:1.5 }
+    .history-more { margin-top:10px; padding:9px 12px; background:transparent; border:1px solid rgba(113,203,217,.35); color:var(--cyan); font-size:11px }
+    .history-more:hover { background:rgba(113,203,217,.12); color:white }
     .explainer { margin-top:27px; padding:22px 25px; color:var(--muted); font-size:12px; line-height:1.85; border:1px solid var(--hair); border-radius:8px; background:rgba(9,15,24,.7) }
     .footer { border-top:1px solid rgba(255,255,255,.1); padding:25px 0; color:#8898a9; font-size:11px }
     @media(max-width:770px) { .dashboard-head { align-items:start; flex-direction:column } .dashboard-controls { justify-content:start } .count-grid { grid-template-columns:1fr } .dashboard { padding:55px 0 70px } }
@@ -121,7 +132,7 @@
         <article class="metric"><div class="metric-top"><span class="metric-name">Complete Technical Assessment</span><span class="doc-tag">DOC 04</span></div><div class="metric-bottom"><strong class="metric-value" data-count="4-view">0</strong><span class="metric-type">View</span></div></article>
         <article class="metric download"><div class="metric-top"><span class="metric-name">Complete Technical Assessment</span><span class="doc-tag">DOC 04</span></div><div class="metric-bottom"><strong class="metric-value" data-count="4-download">0</strong><span class="metric-type">Download</span></div></article>
       </div>
-      <p class="explainer">Counts begin when tracking is published. Each activated View or Download button records one event, including repeat clicks; a retried event cannot be counted twice. Visits directly to a PDF URL and PDFs sent as email attachments are not included. Totals refresh automatically every 30 seconds while this page is open.</p>
+      <p class="explainer">Counts begin when tracking is published. Each activated View or Download button records one event, including repeat clicks; a retried event cannot be counted twice. Visits directly to a PDF URL and PDFs sent as email attachments are not included. Totals refresh automatically every 30 seconds while this page is open. Each counter has its own expandable timestamp log, including previously recorded clicks, displayed in U.S. Eastern Time.</p>
     </section>
   </main>
   <footer class="footer"><div class="wrap">© 2026 Dark Star Consulting Group LLC · Internal document engagement</div></footer>
