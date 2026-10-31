@@ -69,8 +69,8 @@ async function validSession(request, secret) {
 function loginPage(error = false) {
   return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Client Research Access | DSCG</title>' +
   '<style>:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 80% 15%,#20334b 0%,#0b1523 48%,#07101c 100%);color:#f7f8f9;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{width:min(100%,450px);padding:clamp(25px,6vw,44px);border:1px solid #42546b;border-radius:3px;background:#101e2e;box-shadow:0 24px 70px #0006}.kicker{color:#ffb186;letter-spacing:.19em;font-size:11px;font-weight:800;text-transform:uppercase}h1{font-size:clamp(28px,6vw,38px);line-height:1.08;letter-spacing:-.04em;margin:20px 0 13px}p{color:#b8c7d5;line-height:1.6}.name{color:#fff;font-weight:600;margin:0 0 24px}label{display:block;font-size:13px;font-weight:600;margin-bottom:10px}input{display:block;width:100%;border:1px solid #66809d;border-radius:3px;padding:15px;background:#091522;color:#fff;font:inherit;letter-spacing:.18em}input:focus-visible{outline:3px solid #ff9b70;outline-offset:2px}button{width:100%;margin-top:15px;background:#ef9b72;color:#0c1420;border:0;padding:15px;font-weight:800;font-size:14px;cursor:pointer}button:hover{background:#ffc19f}.error{padding:11px 13px;border-left:3px solid #ff927e;background:#452126;color:#ffddd5}a{color:#aad2ef}.footer{margin-top:29px;border-top:1px solid #36485a;padding-top:19px;font-size:12px}</style></head><body><main><div class="kicker">Dark Star Consulting Group / Client Portal</div><h1>Research models</h1><p class="name">Un je ne sais Quoi · Waco, Texas</p><p>Enter the private access code provided by DSCG to open your restaurant research workspace.</p>' +
-  (error ? '<p class="error" role="alert">Code not recognized. Please use the current 12-digit access code; the older five-digit codes no longer work.</p>' : '') +
-  '<form action="' + BASE + '/__auth" method="post"><label for="pin">12-digit client access code</label><p id="pin-help" style="font-size:13px;margin:0 0 10px">The earlier five-digit codes are retired. Please use the new 12-digit code provided by DSCG.</p><input id="pin" name="pin" type="password" inputmode="numeric" autocomplete="off" aria-describedby="pin-help" maxlength="24" required autofocus><button type="submit">Open research models</button></form><p class="footer"><a href="/restaurant-consulting">← Return to Restaurant Consulting</a></p></main></body></html>';
+  (error ? '<p class="error" role="alert">Code not recognized. Please enter either of the two five-digit access codes provided by DSCG.</p>' : '') +
+  '<form action="' + BASE + '/__auth" method="post"><label for="pin">5-digit client access code</label><p id="pin-help" style="font-size:13px;margin:0 0 10px">Both original five-digit access codes are accepted here.</p><input id="pin" name="pin" type="password" inputmode="numeric" autocomplete="off" aria-describedby="pin-help" maxlength="16" required autofocus><button type="submit">Open research models</button></form><p class="footer"><a href="/restaurant-consulting">← Return to Restaurant Consulting</a></p></main></body></html>';
 }
 
 function loginResponse(error = false) {
@@ -146,9 +146,10 @@ export default async function wacoPrivateGateway(request) {
     return response(null, 308, "text/plain; charset=utf-8", { Location: BASE + "/" });
   }
   const pin = Netlify.env.get("WACO_ACCESS_PIN");
+  const secondPin = Netlify.env.get("WACO_ACCESS_PIN_2");
   const secret = Netlify.env.get("WACO_SESSION_SECRET");
   const token = Netlify.env.get("WACO_SITES_UPSTREAM_TOKEN");
-  if (!pin || !secret || !token) {
+  if (!pin || !secondPin || !secret || !token) {
     return response("Research access is temporarily unavailable.", 503, "text/plain; charset=utf-8");
   }
   if (url.pathname === BASE + "/__auth") {
@@ -170,7 +171,9 @@ export default async function wacoPrivateGateway(request) {
     } catch {
       return loginResponse(true);
     }
-    if (typeof submitted !== "string" || !/^\d{12}$/.test(submitted) || !(await sameSecret(submitted, pin))) {
+    const validCode = typeof submitted === "string" && /^\d{5}$/.test(submitted) &&
+      (await Promise.all([sameSecret(submitted, pin), sameSecret(submitted, secondPin)])).some(Boolean);
+    if (!validCode) {
       return loginResponse(true);
     }
     const expiry = Math.floor(Date.now() / 1000) + SESSION_SECONDS;
