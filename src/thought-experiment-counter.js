@@ -22,8 +22,9 @@ let refreshTimer = null;
 
 function displayCounts(counts, at) {
   let total = 0;
-  for (let number = 1; number <= 4; number += 1) {
+  for (let number = 1; number <= 5; number += 1) {
     for (const action of ['view', 'download']) {
+      if (number === 5 && action === 'view') continue;
       const value = Number(counts?.[String(number)]?.[action]);
       const safeCount = Number.isSafeInteger(value) && value >= 0 ? value : 0;
       document.querySelector(`[data-count="${number}-${action}"]`).textContent = safeCount.toLocaleString();

@@ -39,8 +39,9 @@ export default async function readDocumentClickHistory(request: Request) {
   const supplied = createHash('sha256').update(`darkstar-counter-v1:${pin}`).digest();
   if (!timingSafeEqual(supplied, pinVerifier)) return json({ error: 'Incorrect PIN' }, 401);
 
-  if (!Number.isInteger(documentNumber) || Number(documentNumber) < 1 || Number(documentNumber) > 4 ||
-      (action !== 'view' && action !== 'download')) {
+  if (!Number.isInteger(documentNumber) || Number(documentNumber) < 1 || Number(documentNumber) > 5 ||
+      (action !== 'view' && action !== 'download') ||
+      (Number(documentNumber) === 5 && action !== 'download')) {
     return json({ error: 'Invalid document or action' }, 400);
   }
 

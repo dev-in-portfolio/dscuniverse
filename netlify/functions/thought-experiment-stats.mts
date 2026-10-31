@@ -51,6 +51,7 @@ export default async function readDocumentCounts(request: Request) {
       '2': { view: 0, download: 0 },
       '3': { view: 0, download: 0 },
       '4': { view: 0, download: 0 },
+      '5': { view: 0, download: 0 },
     };
     for (const row of rows) {
       if (counts[String(row.document_number)] && (row.action === 'view' || row.action === 'download')) {

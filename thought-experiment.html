@@ -164,6 +164,15 @@
     .document-card .btn{min-height:42px;padding:10px 14px;font-size:12px}
     .document-card .btn-quiet{background:rgba(255,255,255,.045)}
     .document-card .btn-quiet:hover{background:rgba(255,255,255,.1)}
+    .math-package{display:grid;grid-template-columns:70px minmax(0,1fr) auto;align-items:center;gap:22px;margin-top:24px;padding:27px 29px;border:1px solid rgba(223,178,96,.48);border-radius:10px;background:linear-gradient(110deg,rgba(66,47,21,.4),rgba(14,24,36,.96));box-shadow:0 15px 45px rgba(0,0,0,.18)}
+    .math-package-icon{width:70px;height:70px;display:grid;place-items:center;border:1px solid rgba(223,178,96,.42);border-radius:10px;background:rgba(223,178,96,.09);color:var(--gold);font:700 39px Georgia,serif}
+    .math-package h3{font-size:19px;line-height:1.4;margin:0 0 8px}
+    .math-package p{font-size:13px;line-height:1.75;color:#c3cfdd;margin:0 0 9px}
+    .math-package .tag{display:block;color:var(--gold);margin-bottom:8px}
+    .math-package .file-meta{margin:0}
+    .math-package .btn{min-width:165px;justify-content:center}
+    .math-disclaimer{color:#9fb2c5;font-size:12px;line-height:1.65;margin:12px 5px 0}
+    @media(max-width:700px){.math-package{grid-template-columns:52px minmax(0,1fr);gap:15px;padding:19px}.math-package-icon{width:52px;height:52px;font-size:30px}.math-package .actions{grid-column:1/-1}.math-package .btn{width:100%}}
     .reader-guide{padding:30px 0 81px;border-top:1px solid var(--hair)}
     .guide-intro{max-width:830px;font-size:15px;line-height:1.8}
     .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:13px}
@@ -322,6 +331,17 @@
           </div>
         </article>
       </div>
+      <aside class="math-package" aria-labelledby="math-package-title">
+        <div class="math-package-icon" aria-hidden="true">∑</div>
+        <div>
+          <span class="tag">Independent verification · Reviewer release v3</span>
+          <h3 id="math-package-title">Download the Math — Complete Reviewer Package</h3>
+          <p>Examine the corrected Excel workbook, three-page technical brief, original source workbooks, calculation scripts, reconciliation notes, and supporting data.</p>
+          <span class="file-meta">ZIP · 339 KB · October 31, 2026</span>
+        </div>
+        <div class="actions"><a class="btn btn-primary" href="/research/document/5/download" download data-document-number="5" data-document-action="download" aria-label="Download complete reviewer math package ZIP">Download ZIP ↓</a></div>
+      </aside>
+      <p class="math-disclaimer">Provided for independent examination. Model assumptions, limitations, and unresolved implementation questions are documented; this is not an official fiscal score or a peer-reviewed finding.</p>
     </section>
 
     <section id="reading-guide" class="reader-guide wrap" aria-labelledby="guide-title">
